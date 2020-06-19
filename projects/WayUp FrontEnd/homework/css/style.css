@@ -1,0 +1,40 @@
+h1 {
+	color: #FE0000;
+}
+
+.p_1 {
+	color: #FFFFFD;
+	width: 100px;
+	background: #0000FE;
+}
+
+.p_2 {
+	margin-top: 150px;
+}
+
+.p_2 span {
+	color: #FE0000;
+}
+
+h2 {
+	color: #FFF;
+	background: #008001;
+}
+
+.h2_thin {
+	padding: 10px 5px;
+}
+
+.h2_fat {
+	padding: 50px;
+}
+
+.p_3 {
+	margin-left: 100px;
+}
+
+li {
+	border: 1px solid #000;
+	box-sizing: border-box;
+	padding: 2px 0;
+}
