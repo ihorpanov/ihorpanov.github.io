@@ -1,0 +1,157 @@
+body {
+    /* font-family: 'Karma', serif; */
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+body > section, header, footer {
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    background: url(../img/header-bg.jpg) no-repeat /* center */;
+    background-size: cover;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.burger-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    background: #fff;
+    height: 5px;
+    position: absolute;
+    margin-top: -2.5px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.burger-menu span:before {
+    content: '';
+    background: #fff;
+    height: 5px;
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+}
+
+.burger-menu span:after {
+    content: '';
+    background: #fff;
+    height: 5px;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+}
+
+.menu a:hover {
+    color: #FE1212;
+}
+
+.menu li {
+    margin-right: 30px;
+}
+
+.phone {
+    font-weight: 500;
+    color: FE1212;
+}
+
+.action-call {
+    background: #FE1212;
+    border-radius: 5px;
+    padding: 15px 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.action-call:hover {
+    color: #FE1212;
+    background: #fff;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1400px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .menu li {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .phone {
+        display: none;
+    }
+
+    .menu a {
+        letter-spacing: normal;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
