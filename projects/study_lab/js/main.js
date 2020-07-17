@@ -44,4 +44,32 @@ $(document).ready(function(){
             },
         ]
     });
+
+    $('.advantages-slider').slick({
+        arrows: false,
+        slidesToShow: 5,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 4,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true,
+                }
+            },
+        ]
+    });
 });

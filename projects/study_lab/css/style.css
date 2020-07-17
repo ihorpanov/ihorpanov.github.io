@@ -259,7 +259,7 @@ header {
     cursor: pointer;
 }
 
-/* advantages-with-us */
+/* advantages-foreigh-education */
 
 .white-section__cards {
     display: flex;
@@ -307,7 +307,7 @@ header {
 
 /* sl-description */
 
-.sl-description h4 {
+.color-section h4 {
     color: #fff;
     font-weight: bold;
     font-size: 27px;
@@ -323,11 +323,11 @@ header {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.sl-description h4 > span {
+.color-section h4 > span {
     font-family: 'Karma', serif;
 }
 
-.sl-description p {
+.color-section p {
     text-align: left;
     font-weight: bold;
     font-size: 20px;
@@ -354,6 +354,95 @@ header {
 
 .slick-dots{
     bottom: -40px!important;
+}
+
+/* about work with us */
+.about-work-with-us {
+    background: url(../img/about-work-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.about-work-with-us h4 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 27px;
+    width: 61%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.color-section__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 67px;
+}
+
+.color-section__btn {
+    background: #FE1212;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    padding: 17px 75px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.color-section__btn:hover {
+    color: #FE1212;
+    background: #fff;
+}
+
+.about-work-with-us ul {
+    text-align: left;
+    padding: 0;
+    margin:0;
+}
+
+.about-work-with-us ul li {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+}
+
+.about-work-with-us ul li:not(:first-child) {
+    margin-top: 45px;
+}
+
+
+/* advantages-work-with-us */
+.contract-icon {
+    background: url(../img/contract-icon.png) no-repeat center;
+    background-size: contain;
+}
+
+.price-icon {
+    background: url(../img/price-icon.png) no-repeat center;
+    background-size: contain;
+}
+
+.support-icon {
+    background: url(../img/support-icon.png) no-repeat center;
+    background-size: contain;
+}
+
+.respect-icon {
+    background: url(../img/respect-icon.png) no-repeat center;
+    background-size: contain;
+}
+
+.strategy-icon {
+    background: url(../img/strategy-icon.png) no-repeat center;
+    background-size: contain;
+}
+
+.white-section .slick-track {
+    display: flex!important;
+    justify-content: space-between;
 }
 
 /* media queries */
@@ -392,11 +481,16 @@ header {
     }
 
     /* sl-description */
-    .sl-description h4 {
+    .color-section h4 {
         width: 70%;
     }
-    .sl-description p {
+    .color-section p {
         width: 60%;
+    }
+
+    /* about work with us */
+    .color-section__btn {
+        padding: 17px 50px;
     }
 }
 
@@ -428,6 +522,20 @@ header {
     /* sl-description */
     .sl-description {
         padding-bottom: 100px;
+    }
+
+    /* about work with us */
+    .about-work-with-us ul li {
+        letter-spacing: normal;
+        font-size: 18px;
+    }
+
+    .about-work-with-us ul li:not(:first-child) {
+        margin-top: 35px;
+    }
+
+    .color-section__btn {
+        padding: 17px;
     }
 }
 
@@ -508,15 +616,40 @@ header {
         flex-direction: column;
     }
 
-    /* advantages */
+    /* advantages-foreigh-education */
 
     .icon-wrap {
         height: 150px;
     }
 
     /* sl-description */
-    .sl-description {
+    .color-section {
         display: none;
+    }
+
+    /* about work with us */
+    .about-work-with-us h4 {
+        font-size: 16px;
+    }
+
+    .color-section__content {
+        display: block;
+        margin-top: 35px;
+    }
+
+    .about-work-with-us ul li {
+        font-size: 14px;
+    }
+
+    .about-work-with-us ul li:not(:first-child) {
+        margin-top: 15px;
+    }
+
+    .color-section__btn {
+        width: 100%;
+        padding: 17px 0;
+        font-size: 16px;
+        margin-top: 22px;
     }
 }
 
@@ -528,7 +661,7 @@ header {
         font-size: 23px;
     }
 
-    /* advantages */
+    /* advantages-foreigh-education */
 
     .icon-wrap {
         height: 100px;
@@ -598,7 +731,7 @@ header {
         margin-top: 8px;
     }
 
-    /* advantages */
+    /* advantages-foreigh-education */
 
     .icon-wrap {
         height: 75px;
@@ -610,7 +743,7 @@ header {
     }
 
     .white-section:before {
-        height: 7px;
+        height: 10px;
         top: 62px;
     }
 }
