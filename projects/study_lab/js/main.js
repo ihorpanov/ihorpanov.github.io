@@ -16,8 +16,26 @@ burgerButton.addEventListener('click', function () {
     }
 });
 
+
+// function getEqualHeight(params) {
+//     let mainDivs = document.querySelector('.usa-equal-height');
+//     let maxHeight = 0;
+
+//     for (let i = 0; i < mainDivs.length; ++i) {
+//         if (maxHeight < mainDivs[i].clientHeight) {
+//             maxHeight = mainDivs[i].clientHeight;
+//         }
+//     }
+
+//     for (let i = 0; i < mainDivs.length; ++i) {
+//         mainDivs[i].style.height = maxHeight + "px";
+//     }
+// }
+ 
+
 $(document).ready(function(){
-    $('.team-slider').slick({
+    // слайдеры
+    $('.slider-no-attributes').slick({
         arrows: false,
         slidesToShow: 5,
         responsive: [
@@ -45,31 +63,41 @@ $(document).ready(function(){
         ]
     });
 
-    $('.advantages-slider').slick({
-        arrows: false,
-        slidesToShow: 5,
-        responsive: [
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 4,
-                    dots: true,
-                }
+    $('#univer-slider').owlCarousel({
+        margin: 110,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 80,
             },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    dots: true,
-                }
+            
+            768: {
+                items: 2,
+                margin: 80,
             },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 2,
-                    dots: true,
-                }
+
+            1000: {
+                items: 2,
+                margin: 110,
             },
-        ]
+        }
     });
+
+    // выравнивание слайдов по высоте
+    function equalHeight(block) {
+        let maxHeight = 0;
+
+        block.each(function() {
+            thisHeight = $(this).height();
+
+            if (thisHeight > maxHeight) {
+                maxHeight = thisHeight;
+            }
+        });
+
+        block.height(maxHeight);
+    };
+
+    equalHeight($('.usa-equal-height'));
 });

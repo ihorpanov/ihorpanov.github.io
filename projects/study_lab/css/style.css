@@ -36,12 +36,22 @@ h3 {
     margin: 0 auto;
     position: relative;
     font-weight: bold;
-    width: 40%;
+    display: inline-block;
     font-size: 27px;
     line-height: 150%;
     color: #000;
-    z-index: 300;
+    z-index: 200;
+}
+
+.white-section h3:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 150%;
+    top: 0;
+    left: -25%;
     background: #E4E3E3;
+    z-index: -1;
 }
 
 p {
@@ -272,7 +282,7 @@ header {
 }
 
 .icon-wrap {
-    height: 200px;
+    height: 183px;
 }
 
 .prestige-icon {
@@ -341,19 +351,11 @@ header {
     margin-top: 53px;
 }
 
-.slick-slide img {
-    margin: 0 auto;
-}
-
 .team p {
     font-weight: bold;
     font-size: 22px;
     color: #000;
     margin-top: 48px;
-}
-
-.slick-dots{
-    bottom: -40px!important;
 }
 
 /* about work with us */
@@ -394,6 +396,10 @@ header {
 .color-section__btn:hover {
     color: #FE1212;
     background: #fff;
+}
+
+.slider-no-attributes {
+    margin-top: 40px;
 }
 
 .about-work-with-us ul {
@@ -440,9 +446,81 @@ header {
     background-size: contain;
 }
 
-.white-section .slick-track {
-    display: flex!important;
-    justify-content: space-between;
+/* univers USA */
+.university-slider {
+    margin-top: 45px;
+}
+
+.univer-slider-photo {
+    height: 189px;
+}
+
+.slider-item {
+    margin: 0 auto;
+    max-width: 373.51px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.33);
+}
+
+.univer-slider-photo {
+    overflow: hidden;
+}
+
+.university-slider .owl-stage-outer {
+    padding: 20px 0;
+}
+
+.univer-slider-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.university-slider img {
+    position: absolute;
+    height: 100%;
+}
+
+.univer-slider-title {
+    background: #FBEDBA;
+    padding: 10px 51px;
+}
+
+.univer-slider-title p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    line-height: 150%;
+}
+
+.univer-slider-description {
+    background: #F5F5F5;
+    padding: 20px 28px;
+}
+
+.univer-slider-description p {
+    font-style: italic;
+    font-size: 20px;
+    color: #000;
+    line-height: 150%;
+}
+
+.univer-slider-price {
+    background: #FBEDBA;
+    padding: 13px 28px;
+}
+
+.univer-slider-price p {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.univer-slider-price p span {
+    color: #FE1212;
+}
+
+.univer-slider-price br {
+    display: none;
 }
 
 /* media queries */
@@ -466,10 +544,6 @@ header {
 @media screen and (max-width: 1200px) {
     /* global */
 
-    h3 {
-        width: 45%;
-    }
-
     /* header */
     
     .menu li {
@@ -492,14 +566,17 @@ header {
     .color-section__btn {
         padding: 17px 50px;
     }
+
+    /* advantages-foreigh-education */
+
+    .icon-wrap {
+        height: 150px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     /* global */
 
-    h3 {
-        width: 53%;
-    }
 
     /* header */
     
@@ -537,13 +614,27 @@ header {
     .color-section__btn {
         padding: 17px;
     }
+
+    /* univers USA */
+    .slider-item {
+        max-width: 329.51px;
+    }
+
+    .univer-slider-photo {
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .univer-slider-description p {
+        font-size: 19px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     /* global */
-
-    h3 {
-        width: 40%;
+    .white-section h3:after {
+        width: 115%;
+        left: -7.5%;
     }
 
     /* header */
@@ -616,12 +707,6 @@ header {
         flex-direction: column;
     }
 
-    /* advantages-foreigh-education */
-
-    .icon-wrap {
-        height: 150px;
-    }
-
     /* sl-description */
     .color-section {
         display: none;
@@ -651,13 +736,25 @@ header {
         font-size: 16px;
         margin-top: 22px;
     }
+
+    /* univers USA */
+    .slider-item {
+        max-width: 373.51px;
+    }
+
+    .univer-slider-photo {
+        height: 189px;
+    }
+
+    .univer-slider-description {
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 670px) {
     /* global */
 
     h3 {
-        width: 47%;
         font-size: 23px;
     }
 
@@ -677,6 +774,7 @@ header {
 
     .white-section__zagol {
         font-size: 18px;
+        margin-top: 40px;
     }
 }
 
@@ -686,6 +784,36 @@ header {
     h3 {
         font-size: 20px;
     }
+
+    /* univers USA */
+
+    .university-slider {
+        margin-top: 10px;
+    }
+
+    .slider-item {
+        max-width: 257.14px;
+    }
+
+    .univer-slider-photo {
+        height: 124.94px;
+    }
+
+    .univer-slider-title p {
+        font-size: 15px;
+    }
+
+    .univer-slider-description p {
+        font-size: 14px;
+    }
+
+    .univer-slider-price p {
+        font-size: 15px;
+    }
+
+    .univer-slider-price br {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -693,7 +821,6 @@ header {
     
     h3 {
         font-size: 18px;
-        width: 50%;
     }
 
     .advantages-with-us br {
