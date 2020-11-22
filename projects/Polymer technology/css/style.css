@@ -1,0 +1,411 @@
+/* reset css */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* variables */
+/* general */
+body {
+  font-family: Roboto, Open Sans, sans-serif;
+  color: #000;
+  font-style: normal;
+  text-align: left;
+  line-height: 23px;
+}
+
+body button {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body p {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+body h1 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 47px;
+  color: #fff;
+}
+
+body h2 {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+body h3 {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+body .link {
+  font-weight: bold;
+  color: #3b49c4;
+}
+
+body .container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+body section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* header */
+.header {
+  padding: 22px 15px 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(../img/header-bg.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header .header__nav .header__burger-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 33px;
+  height: 25px;
+  font-size: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .header__nav .header__burger-menu:focus {
+  outline: none;
+}
+
+.header .header__nav .header__burger-menu span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -2px;
+  background: #fff;
+  width: 100%;
+  height: 3px;
+  -webkit-transition-duration: 0.3s, 0.3s;
+       -o-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+}
+
+.header .header__nav .header__burger-menu span:before, .header .header__nav .header__burger-menu span:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 3px;
+  -webkit-transition-duration: 0.3s, 0.3s;
+       -o-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+}
+
+.header .header__nav .header__burger-menu span:before {
+  top: -9px;
+}
+
+.header .header__nav .header__burger-menu span:after {
+  bottom: -9px;
+}
+
+.header .header__nav .burger-is-active span {
+  background: none;
+}
+
+.header .header__nav .burger-is-active span:before {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.header .header__nav .burger-is-active span:after {
+  bottom: 0;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.header .header__nav .header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header__nav .header__list li:not(:first-child) {
+  margin-left: 23px;
+}
+
+.header .header__nav .header__list li .header__menu-link {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+}
+
+.header .header__nav .header__list li .header__menu-link:after {
+  position: absolute;
+  content: '';
+  display: block;
+  background: #fff;
+  height: 1px;
+  width: 0;
+  -webkit-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  bottom: -3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header .header__nav .header__list li .header__menu-link:focus:after {
+  width: 100%;
+}
+
+.header .header__nav .header__list li:hover a:after {
+  width: 100%;
+}
+
+.header .header__nav .header__contacts .header__phone-number, .header .header__nav .header__contacts .header__email-addres {
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .header__nav .header__contacts .header__phone, .header .header__nav .header__contacts .header__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav .header__contacts .header__phone .header__phone-logo, .header .header__nav .header__contacts .header__phone .header__email-logo, .header .header__nav .header__contacts .header__email .header__phone-logo, .header .header__nav .header__contacts .header__email .header__email-logo {
+  margin-right: 7px;
+}
+
+.header .header__nav-separator {
+  display: none;
+  margin-top: 25px;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+
+.header .header__offer {
+  margin-top: 186px;
+}
+
+.header .header__offer .header__description {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 17px;
+}
+
+.header .header__offer .header__cta {
+  outline: none;
+  margin-top: 27px;
+  background: #3B49C5;
+  border: none;
+  border-radius: 4px;
+  padding: 13.5px 21px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.3s linear;
+  transition: -webkit-box-shadow 0.3s linear;
+  -o-transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
+}
+
+.header .header__offer .header__cta:hover, .header .header__offer .header__cta:focus {
+  -webkit-box-shadow: 0px 0px 10px #3B49C4;
+          box-shadow: 0px 0px 10px #3B49C4;
+}
+
+/* media queries */
+/* Desktops and laptops */
+@media screen and (max-width: 1100px) {
+  /* header */
+  .header .header__nav .header__list li .header__menu-link {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  /* header */
+  .header .header__nav .header__list li:not(:first-child) {
+    margin-left: 15px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 991px) {
+  /* header */
+  .header .header__nav .header__list li .header__menu-link {
+    font-size: 15px;
+  }
+  .header .header__nav .header__contacts {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .header {
+    padding: 22px 15px 250px 15px;
+    height: auto;
+  }
+  .header .header__nav {
+    display: block;
+  }
+  .header .header__nav .header__list {
+    margin-top: 40px;
+  }
+  .header .header__nav .header__list li .header__menu-link {
+    font-size: 18px;
+  }
+  .header .header__nav .header__burger-menu {
+    display: block;
+  }
+  .header .header__nav .header__menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .header .header__nav .header__menu .header__list li {
+    text-transform: uppercase;
+  }
+  .header .header__nav .header__menu .header__list li:not(:first-child) {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  /* header */
+  .header {
+    padding: 22px 15px 160px 15px;
+  }
+  .header .header__offer {
+    margin-top: 160px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* header */
+  body h1 {
+    font-size: 35px;
+    line-height: 30.47px;
+  }
+  body .header .header__offer .header__description {
+    font-size: 21px;
+    line-height: 21.09px;
+  }
+}
+
+/* Portrait phones and smaller */
+@media screen and (max-width: 479px) {
+  /* header */
+  body h1 {
+    font-size: 26px;
+  }
+  body .header .header__offer .header__cta {
+    width: 100%;
+  }
+  body .header .header__offer .header__description {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+  body .header .header__offer .header__cta {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  body h1 {
+    font-size: 23px;
+  }
+  body .header .header__offer .header__cta {
+    width: 100%;
+  }
+  body .header .header__offer .header__description {
+    font-size: 17px;
+    margin-top: 25px;
+  }
+  body .header .header__offer .header__cta {
+    margin-top: 28px;
+  }
+}
+
+/* Iphone 5 */

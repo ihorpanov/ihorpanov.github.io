@@ -1,0 +1,427 @@
+/* reset css */
+@import "_reset";
+
+/* variables */
+$mainColor: #3B49C5;
+
+/* general */
+body {
+    font-family: Roboto, Open Sans, sans-serif;
+    color: #000;
+    font-style: normal;
+    text-align: left;
+    line-height: 23px;
+
+    button {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 47px;
+        color: #fff;
+    }
+    
+    h2 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+    h3 {
+        font-weight: 900;
+        font-size: 20px;
+    }
+    
+    .link {
+        font-weight: bold;
+        color: #3b49c4;
+    }
+    
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    
+    section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+/* header */
+.header {
+    padding: 22px 15px 0 15px;
+    box-sizing: border-box;
+    background: url(../img/header-bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .header__burger-menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+            width: 33px;
+            height: 25px;
+            font-size: 0;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0);
+            border: none;
+            box-sizing: border-box;;
+
+            &:focus{
+                outline: none;
+            }
+            
+            span {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                margin-top: -2px;
+                background: #fff;
+                width: 100%;
+                height: 3px;
+                transition-duration: 0.3s, 0.3s;
+
+                &:before, &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    position: absolute;
+                    background: #fff;
+                    width: 100%;
+                    height: 3px;
+                    transition-duration: 0.3s, 0.3s;
+                }
+
+                &:before {
+                    top: -9px;
+                }
+
+                &:after {
+                    bottom: -9px;
+                }
+            }
+        }
+
+        .burger-is-active {
+            span {
+                background: none;
+
+                &:before {
+                    top: 0;
+                    transform: rotate(-135deg);
+                }
+
+                &:after {
+                    bottom: 0;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+
+        .header__list {
+            display: flex;
+
+            li {
+                &:not(:first-child) {
+                    margin-left: 23px;
+                }
+
+                .header__menu-link {
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #ffffff;
+                    text-decoration: none;
+
+                    position: relative;
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        background: #fff;
+                        height: 1px;
+                        width: 0;
+                        transition: width 0.3s linear;
+                        bottom: -3px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    &:focus {
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &:hover a {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .header__contacts {
+            .header__phone-number, .header__email-addres {
+                font-size: 13px;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .header__phone,  .header__email{
+                display: flex;
+                align-items: center;
+
+                .header__phone-logo, .header__email-logo {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+
+    .header__nav-separator {
+        display: none;
+        margin-top: 25px;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+    }
+
+    .header__offer {
+        margin-top: 186px;
+
+        .header__description {
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 28px;
+            margin-top: 17px;
+        }
+
+        .header__cta {
+            outline: none;
+            margin-top: 27px;
+            background: $mainColor;
+            border: none;
+            border-radius: 4px;
+            padding: 13.5px 21px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: box-shadow 0.3s linear;
+
+            &:hover, &:focus {
+                box-shadow: 0px 0px 10px #3B49C4;
+            }
+        }
+    }
+}
+
+/* media queries */
+
+/* Desktops and laptops */
+@media screen and (max-width: 1999px) {
+    // .header {
+
+}
+
+@media screen and (max-width: 1100px) {
+    /* header */
+    .header {
+        .header__nav {
+            .header__list {
+                li {
+                    .header__menu-link {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    /* header */
+    .header {
+        .header__nav {
+            .header__list {
+                li {
+                    &:not(:first-child) {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 991px) {
+    /* header */
+    .header {
+        .header__nav {
+            .header__list {
+                li {
+                    .header__menu-link {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .header__contacts {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    // /* header */
+    .header {
+        padding: 22px 15px 250px 15px;
+        height: auto;
+        
+        .header__nav {
+            display: block;
+
+            .header__list {
+                margin-top: 40px;
+
+                li {
+                    .header__menu-link {
+                        font-size: 18px;
+                    }
+                }
+            }
+            
+            .header__burger-menu {
+                display: block;
+            }
+
+            .header__menu {
+                display: none;
+                width: 100%;
+                text-align: center;
+
+                .header__list {
+                    li {
+                        text-transform: uppercase;
+    
+                        &:not(:first-child) {
+                            margin-left: 0;
+                            margin-top: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+    /* header */
+    .header {
+        padding: 22px 15px 160px 15px;
+
+        .header__offer {
+            margin-top: 160px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* header */
+    body {
+        h1 {
+            font-size: 35px;
+            line-height: 30.47px;
+        }
+
+        .header {
+            .header__offer {
+                .header__description {
+                    font-size: 21px;
+                    line-height: 21.09px;
+                }
+            }
+        }
+    }
+    
+}
+
+/* Portrait phones and smaller */
+@media screen and (max-width: 479px) {
+    /* header */
+    body {
+        h1 {
+            font-size: 26px;
+        }
+
+        .header {
+            .header__offer {
+                .header__cta {
+                    width: 100%;
+                }
+
+                .header__description {
+                    font-size: 18px;
+                    margin-top: 25px;
+                }
+
+                .header__cta {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    body {
+        h1 {
+            font-size: 23px;
+        }
+
+        .header {
+            .header__offer {
+                .header__cta {
+                    width: 100%;
+                }
+
+                .header__description {
+                    font-size: 17px;
+                    margin-top: 25px;
+                }
+
+                .header__cta {
+                    margin-top: 28px;
+                }
+            }
+        }
+    }
+}
+
+/* Iphone 5 */
+@media screen and (max-width: 319px) {
+    
+}
