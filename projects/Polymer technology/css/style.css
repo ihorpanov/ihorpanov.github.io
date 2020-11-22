@@ -378,29 +378,27 @@ body section {
 @media screen and (max-width: 479px) {
   /* header */
   body h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
   body .header .header__offer .header__cta {
     width: 100%;
+    padding: 17px 21px;
   }
   body .header .header__offer .header__description {
-    font-size: 18px;
-    margin-top: 25px;
+    font-size: 20px;
+    margin-top: 20px;
   }
   body .header .header__offer .header__cta {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 387px) {
   body h1 {
-    font-size: 23px;
-  }
-  body .header .header__offer .header__cta {
-    width: 100%;
+    font-size: 27px;
   }
   body .header .header__offer .header__description {
-    font-size: 17px;
+    font-size: 19px;
     margin-top: 25px;
   }
   body .header .header__offer .header__cta {
@@ -408,4 +406,21 @@ body section {
   }
 }
 
+@media screen and (max-width: 374px) {
+  body .header .header__offer .header__cta {
+    width: 100%;
+  }
+  body .header .header__offer .header__description {
+    font-size: 17px;
+  }
+}
+
 /* Iphone 5 */
+@media screen and (max-width: 319px) {
+  body h1 {
+    font-size: 22px;
+  }
+  body .header .header__offer .header__description {
+    font-size: 17px;
+  }
+}

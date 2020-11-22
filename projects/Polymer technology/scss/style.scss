@@ -374,42 +374,39 @@ body {
     /* header */
     body {
         h1 {
-            font-size: 26px;
+            font-size: 28px;
         }
 
         .header {
             .header__offer {
                 .header__cta {
                     width: 100%;
+                    padding: 17px 21px;
                 }
 
                 .header__description {
-                    font-size: 18px;
-                    margin-top: 25px;
+                    font-size: 20px;
+                    margin-top: 20px;
                 }
 
                 .header__cta {
-                    margin-top: 25px;
+                    margin-top: 30px;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 387px) {
     body {
         h1 {
-            font-size: 23px;
+            font-size: 27px;
         }
 
         .header {
             .header__offer {
-                .header__cta {
-                    width: 100%;
-                }
-
                 .header__description {
-                    font-size: 17px;
+                    font-size: 19px;
                     margin-top: 25px;
                 }
 
@@ -421,7 +418,35 @@ body {
     }
 }
 
+@media screen and (max-width: 374px) {
+    body {
+        .header {
+            .header__offer {
+                .header__cta {
+                    width: 100%;
+                }
+
+                .header__description {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
 /* Iphone 5 */
 @media screen and (max-width: 319px) {
-    
+    body {
+        h1 {
+            font-size: 22px;
+        }
+
+        .header {
+            .header__offer {
+                .header__description {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
 }
