@@ -1,4 +1,4 @@
-// бургер меню на чистом js (для себя)
+/* бургер меню на чистом js (для себя) */
 let burgerButton = document.querySelector('.header__burger-menu');
 let mobileMenu = document.querySelector('.header__menu');
 let mobileMenuList = document.querySelector('.header__list');
@@ -16,4 +16,26 @@ burgerButton.addEventListener('click', function () {
         mobileMenuList.style.display = 'block';
         navSeparator.style.display = 'block';
     }
+});
+
+$(document).ready(function(){
+    /* owl carousel */
+    $(".owl-carousel").owlCarousel({
+        responsiveClass:true,
+        margin:10,
+        responsive:{
+            0:{
+                items:1,
+                dots:true,
+            },
+            600:{
+                items:2,
+                dots:true,
+            },
+            900:{
+                items:3,
+                dots:false,
+            },
+        }
+    });
 });

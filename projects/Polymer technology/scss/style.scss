@@ -39,6 +39,14 @@ body {
         font-weight: 900;
         font-size: 20px;
     }
+
+    .title {
+        text-align: center;
+
+        p {
+            margin-top: 25px;
+        }
+    }
     
     .link {
         font-weight: bold;
@@ -58,7 +66,7 @@ body {
 
 /* header */
 .header {
-    padding: 22px 15px 0 15px;
+    padding-top: 22px;
     box-sizing: border-box;
     background: url(../img/header-bg.jpg) no-repeat center;
     background-size: cover;
@@ -236,10 +244,48 @@ body {
     }
 }
 
+/* profit */
+.profit {
+    .profit__slider {
+        margin-top: 60px;
+
+        .profit__slider-item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 4px;
+
+            p {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                margin-top: -18%;
+                font-weight: 900;
+                font-size: 25px;
+                line-height: 169.69%;
+                color: #FFFFFF;
+            }
+        }
+
+        /* custom owl styles */
+        .owl-item {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
 /* media queries */
 
 /* Desktops and laptops */
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
+    body {
+        .container {
+            width: 97%;
+        }
+    }
     // .header {
 
 }
@@ -261,14 +307,32 @@ body {
 
 @media screen and (max-width: 1040px) {
     /* header */
-    .header {
-        .header__nav {
-            .header__list {
-                li {
-                    &:not(:first-child) {
-                        margin-left: 15px;
+    body {
+
+        h2 {
+            line-height: 26.95px;
+        }
+
+        section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .header {
+            .header__nav {
+                .header__list {
+                    li {
+                        &:not(:first-child) {
+                            margin-left: 15px;
+                        }
                     }
                 }
+            }
+        }
+
+        .profit {
+            .profit__slider {
+                margin-top: 35px;
             }
         }
     }
@@ -292,12 +356,38 @@ body {
             }
         }
     }
+
+    /* profit */
+    .profit {
+        .profit__slider {
+    
+            .profit__slider-item {
+                p {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 899px) {
+    /* profit */
+    .profit {
+        .profit__slider {
+            margin-top: 60px;
+    
+            .profit__slider-item {
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 870px) {
     // /* header */
     .header {
-        padding: 22px 15px 250px 15px;
         height: auto;
         
         .header__nav {
@@ -339,29 +429,61 @@ body {
 
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
-    /* header */
+    body {
+        .title {
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+    
     .header {
-        padding: 22px 15px 160px 15px;
+        padding: 22px 0 160px 0;
 
         .header__offer {
             margin-top: 160px;
         }
     }
+
+    /* profit */
+    .profit {
+        .profit__slider {
+    
+            .profit__slider-item {
+                p {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 600px) {
-    /* header */
+@media screen and (max-width: 599px) {
     body {
-        h1 {
-            font-size: 35px;
-            line-height: 30.47px;
+        h2 {
+            font-size: 23px;
         }
-
+        
         .header {
             .header__offer {
+                h1 {
+                    font-size: 35px;
+                    line-height: 30.47px;
+                }
+
                 .header__description {
                     font-size: 21px;
                     line-height: 21.09px;
+                }
+            }
+        }
+
+        .profit {
+            .profit__slider {
+                .profit__slider-item {
+                    p {
+                        font-size: 25px;
+                    }
                 }
             }
         }
@@ -373,12 +495,12 @@ body {
 @media screen and (max-width: 479px) {
     /* header */
     body {
-        h1 {
-            font-size: 28px;
-        }
-
         .header {
             .header__offer {
+                h1 {
+                    font-size: 28px;
+                }
+
                 .header__cta {
                     width: 100%;
                     padding: 17px 21px;
@@ -435,14 +557,14 @@ body {
 }
 
 /* Iphone 5 */
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 320px) {
     body {
-        h1 {
-            font-size: 22px;
-        }
-
         .header {
             .header__offer {
+                h1 {
+                    font-size: 22px;
+                }
+
                 .header__description {
                     font-size: 17px;
                 }

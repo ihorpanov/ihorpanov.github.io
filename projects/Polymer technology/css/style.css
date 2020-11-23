@@ -78,6 +78,14 @@ body h3 {
   font-size: 20px;
 }
 
+body .title {
+  text-align: center;
+}
+
+body .title p {
+  margin-top: 25px;
+}
+
 body .link {
   font-weight: bold;
   color: #3b49c4;
@@ -95,7 +103,7 @@ body section {
 
 /* header */
 .header {
-  padding: 22px 15px 0 15px;
+  padding-top: 22px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: url(../img/header-bg.jpg) no-repeat center;
@@ -293,8 +301,56 @@ body section {
           box-shadow: 0px 0px 10px #3B49C4;
 }
 
+/* profit */
+.profit .profit__slider {
+  margin-top: 60px;
+  /* custom owl styles */
+}
+
+.profit .profit__slider .profit__slider-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.profit .profit__slider .profit__slider-item p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -18%;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 169.69%;
+  color: #FFFFFF;
+}
+
+.profit .profit__slider .owl-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* media queries */
 /* Desktops and laptops */
+@media screen and (max-width: 1199px) {
+  body .container {
+    width: 97%;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   /* header */
   .header .header__nav .header__list li .header__menu-link {
@@ -304,8 +360,18 @@ body section {
 
 @media screen and (max-width: 1040px) {
   /* header */
-  .header .header__nav .header__list li:not(:first-child) {
+  body h2 {
+    line-height: 26.95px;
+  }
+  body section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  body .header .header__nav .header__list li:not(:first-child) {
     margin-left: 15px;
+  }
+  body .profit .profit__slider {
+    margin-top: 35px;
   }
 }
 
@@ -318,11 +384,24 @@ body section {
   .header .header__nav .header__contacts {
     display: none;
   }
+  /* profit */
+  .profit .profit__slider .profit__slider-item p {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  /* profit */
+  .profit .profit__slider {
+    margin-top: 60px;
+  }
+  .profit .profit__slider .profit__slider-item p {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 870px) {
   .header {
-    padding: 22px 15px 250px 15px;
     height: auto;
   }
   .header .header__nav {
@@ -353,18 +432,26 @@ body section {
 
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
-  /* header */
+  body .title p {
+    margin-top: 10px;
+  }
   .header {
-    padding: 22px 15px 160px 15px;
+    padding: 22px 0 160px 0;
   }
   .header .header__offer {
     margin-top: 160px;
   }
+  /* profit */
+  .profit .profit__slider .profit__slider-item p {
+    font-size: 23px;
+  }
 }
 
-@media screen and (max-width: 600px) {
-  /* header */
-  body h1 {
+@media screen and (max-width: 599px) {
+  body h2 {
+    font-size: 23px;
+  }
+  body .header .header__offer h1 {
     font-size: 35px;
     line-height: 30.47px;
   }
@@ -372,12 +459,15 @@ body section {
     font-size: 21px;
     line-height: 21.09px;
   }
+  body .profit .profit__slider .profit__slider-item p {
+    font-size: 25px;
+  }
 }
 
 /* Portrait phones and smaller */
 @media screen and (max-width: 479px) {
   /* header */
-  body h1 {
+  body .header .header__offer h1 {
     font-size: 28px;
   }
   body .header .header__offer .header__cta {
@@ -416,8 +506,8 @@ body section {
 }
 
 /* Iphone 5 */
-@media screen and (max-width: 319px) {
-  body h1 {
+@media screen and (max-width: 320px) {
+  body .header .header__offer h1 {
     font-size: 22px;
   }
   body .header .header__offer .header__description {
