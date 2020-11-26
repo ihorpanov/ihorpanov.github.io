@@ -20,6 +20,15 @@ body {
     p {
         font-weight: normal;
         font-size: 15px;
+
+        span, a {
+            font-weight: bold;
+        }
+
+        a {
+            color: $mainColor;
+            text-decoration: none;
+        }
     }
     
     h1 {
@@ -46,11 +55,6 @@ body {
         p {
             margin-top: 25px;
         }
-    }
-    
-    .link {
-        font-weight: bold;
-        color: #3b49c4;
     }
     
     .container {
@@ -157,8 +161,8 @@ body {
                     line-height: 18px;
                     color: #ffffff;
                     text-decoration: none;
-
                     position: relative;
+                    -webkit-tap-highlight-color: transparent;
 
                     &:after {
                         position: absolute;
@@ -246,6 +250,8 @@ body {
 
 /* profit */
 .profit {
+    padding-bottom: 0;
+
     .profit__slider {
         margin-top: 60px;
 
@@ -277,6 +283,22 @@ body {
     }
 }
 
+/* about */
+.about {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(46, 117, 255, 0.275) 100%);
+
+    .about__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 60px;
+
+        p {
+            padding-right: 13%;
+        }
+    }
+}
+
 /* media queries */
 
 /* Desktops and laptops */
@@ -285,20 +307,39 @@ body {
         .container {
             width: 97%;
         }
-    }
-    // .header {
 
+        .about {
+            .about__content {
+                p {
+                    padding-right: 8%;
+                }
+
+                img {
+                    width: 45%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1100px) {
-    /* header */
-    .header {
-        .header__nav {
-            .header__list {
-                li {
-                    .header__menu-link {
-                        font-size: 13px;
+    body {
+        .header {
+            .header__nav {
+                .header__list {
+                    li {
+                        .header__menu-link {
+                            font-size: 13px;
+                        }
                     }
+                }
+            }
+        }
+    
+        .about {
+            .about__content {
+                p {
+                    padding-right: 5%;
                 }
             }
         }
@@ -340,30 +381,48 @@ body {
 
 /* Tablets */
 @media screen and (max-width: 991px) {
-    /* header */
-    .header {
-        .header__nav {
-            .header__list {
-                li {
-                    .header__menu-link {
-                        font-size: 15px;
+    body {
+        .header {
+            .header__nav {
+                .header__list {
+                    li {
+                        .header__menu-link {
+                            font-size: 15px;
+                        }
+                    }
+                }
+    
+                .header__contacts {
+                    display: none;
+                }
+            }
+        }
+    
+        .profit {
+            .profit__slider {
+        
+                .profit__slider-item {
+                    p {
+                        font-size: 23px;
                     }
                 }
             }
-
-            .header__contacts {
-                display: none;
-            }
         }
-    }
-
-    /* profit */
-    .profit {
-        .profit__slider {
     
-            .profit__slider-item {
+        .about {
+            .about__content {
+                display: block;
+                margin-top: 35px;
+
                 p {
-                    font-size: 23px;
+                    margin: 0 auto;
+                    padding-right: 0;
+                    width: 90%;
+                }
+    
+                img {
+                    width: 100%;
+                    margin-top: 25px;
                 }
             }
         }
@@ -513,6 +572,14 @@ body {
 
                 .header__cta {
                     margin-top: 30px;
+                }
+            }
+        }
+
+        .about {
+            .about__content {
+                p {
+                    width: 100%;
                 }
             }
         }
