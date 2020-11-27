@@ -84,7 +84,7 @@ body h2 {
 
 body h3 {
   font-weight: 900;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 body .title {
@@ -377,6 +377,90 @@ body section {
   padding-right: 13%;
 }
 
+/* advantages */
+.advantages .advantages__items {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.advantages .advantages__items .advantages__item {
+  width: 270px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: url(../img/sprite.svg);
+}
+
+.advantages .advantages__items .advantages__item:nth-child(n+5) {
+  margin-top: 60px;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo1 {
+  background-position: 0 0;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo2 {
+  background-position: 350px 0;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo3 {
+  background-position: 300px 0;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo4 {
+  background-position: 250px 0;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo5 {
+  background-position: 200px 0;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo6 {
+  background-position: 150px 0;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo7 {
+  background-position: 100px 0;
+}
+
+.advantages .advantages__items .advantages__item .advantages__logo8 {
+  background-position: 50px 0;
+}
+
+.advantages .advantages__items .advantages__item h3 {
+  margin-top: 18px;
+  position: relative;
+}
+
+.advantages .advantages__items .advantages__item h3:before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 30px;
+  left: 50%;
+  margin-left: -15px;
+  bottom: -10px;
+  background: #067C12;
+}
+
+.advantages .advantages__items .advantages__item p {
+  margin-top: 15px;
+}
+
 /* media queries */
 /* Desktops and laptops */
 @media screen and (max-width: 1199px) {
@@ -388,6 +472,12 @@ body section {
   }
   body .about .about__content img {
     width: 45%;
+  }
+}
+
+@media screen and (max-width: 1113px) {
+  body .advantages .advantages__items .advantages__item:nth-child(4) {
+    margin-top: 60px;
   }
 }
 
@@ -414,6 +504,12 @@ body section {
   }
   body .profit .profit__slider {
     margin-top: 35px;
+  }
+  body .advantages .advantages__items {
+    margin-top: 35px;
+  }
+  body .advantages .advantages__items .advantages__item:nth-child(n+4) {
+    margin-top: 30px;
   }
 }
 
@@ -483,19 +579,31 @@ body section {
   }
 }
 
+@media screen and (max-width: 835px) {
+  body .advantages .advantages__items {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .advantages .advantages__items .advantages__item:nth-child(n+3) {
+    margin-top: 30px;
+  }
+  body .advantages .advantages__items .advantages__item h3 {
+    margin-top: 7px;
+  }
+}
+
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
   body .title p {
     margin-top: 10px;
   }
-  .header {
+  body .header {
     padding: 22px 0 160px 0;
   }
-  .header .header__offer {
+  body .header .header__offer {
     margin-top: 160px;
   }
-  /* profit */
-  .profit .profit__slider .profit__slider-item p {
+  body .profit .profit__slider .profit__slider-item p {
     font-size: 23px;
   }
 }
@@ -514,6 +622,18 @@ body section {
   }
   body .profit .profit__slider .profit__slider-item p {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  body .advantages .advantages__items .advantages__item {
+    width: 100%;
+  }
+  body .advantages .advantages__items .advantages__item:nth-child(n+2) {
+    margin-top: 30px;
+  }
+  body .advantages .advantages__items .advantages__item p br {
+    display: none;
   }
 }
 

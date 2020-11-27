@@ -3,6 +3,7 @@
 
 /* variables */
 $mainColor: #3B49C5;
+$secondColor: #067C12;
 
 /* general */
 body {
@@ -46,7 +47,7 @@ body {
     
     h3 {
         font-weight: 900;
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .title {
@@ -299,6 +300,86 @@ body {
     }
 }
 
+/* advantages */
+.advantages {
+    .advantages__items {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .advantages__item {
+            width: 270px;
+            text-align: center;
+            box-sizing: border-box;
+
+            .advantages__logo {
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                background: url(../img/sprite.svg);
+            }
+
+            &:nth-child(n+5) {
+                margin-top: 60px;
+            }
+
+            .advantages__logo1 {
+                background-position: 0 0;
+            }
+
+            .advantages__logo2 {
+                background-position: 350px 0;
+            }
+
+            .advantages__logo3 {
+                background-position: 300px 0;
+            }
+
+            .advantages__logo4 {
+                background-position: 250px 0;
+            }
+
+            .advantages__logo5 {
+                background-position: 200px 0;
+            }
+
+            .advantages__logo6 {
+                background-position: 150px 0;
+            }
+
+            .advantages__logo7 {
+                background-position: 100px 0;
+            }
+
+            .advantages__logo8 {
+                background-position: 50px 0;
+            }
+
+            h3 {
+                margin-top: 18px;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    height: 2px;
+                    width: 30px;
+                    left: 50%;
+                    margin-left: -15px;
+                    bottom: -10px;
+                    background: $secondColor;
+                }
+            }
+
+            p {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
 /* media queries */
 
 /* Desktops and laptops */
@@ -316,6 +397,20 @@ body {
 
                 img {
                     width: 45%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1113px) {
+    body {
+        .advantages {
+            .advantages__items {
+                .advantages__item {
+                    &:nth-child(4) {
+                        margin-top: 60px;
+                    }
                 }
             }
         }
@@ -374,6 +469,18 @@ body {
         .profit {
             .profit__slider {
                 margin-top: 35px;
+            }
+        }
+
+        .advantages {
+            .advantages__items {
+                margin-top: 35px;
+
+                .advantages__item {
+                    &:nth-child(n+4) {
+                        margin-top: 30px;
+                    }
+                }
             }
         }
     }
@@ -486,6 +593,26 @@ body {
     }
 }
 
+@media screen and (max-width: 835px) {
+    body {
+        .advantages {
+            .advantages__items {
+                justify-content: space-around;
+
+                .advantages__item {
+                    &:nth-child(n+3) {
+                        margin-top: 30px;
+                    }
+
+                    h3 {
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
     body {
@@ -494,23 +621,22 @@ body {
                 margin-top: 10px;
             }
         }
-    }
-    
-    .header {
-        padding: 22px 0 160px 0;
 
-        .header__offer {
-            margin-top: 160px;
+        .header {
+            padding: 22px 0 160px 0;
+    
+            .header__offer {
+                margin-top: 160px;
+            }
         }
-    }
-
-    /* profit */
-    .profit {
-        .profit__slider {
     
-            .profit__slider-item {
-                p {
-                    font-size: 23px;
+        .profit {
+            .profit__slider {
+        
+                .profit__slider-item {
+                    p {
+                        font-size: 23px;
+                    }
                 }
             }
         }
@@ -548,6 +674,27 @@ body {
         }
     }
     
+}
+
+@media screen and (max-width: 556px) {
+    body {
+        .advantages {
+            .advantages__items {
+                .advantages__item {
+                    width: 100%;
+                    &:nth-child(n+2) {
+                        margin-top: 30px;
+                    }
+
+                    p {
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Portrait phones and smaller */
