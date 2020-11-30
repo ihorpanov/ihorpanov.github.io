@@ -36,6 +36,8 @@ $(document).ready(function(){
                 dots:true,
             },
             900:{
+                loop:false,
+                autoplay:false,
                 items:3,
                 dots:false,
             },
