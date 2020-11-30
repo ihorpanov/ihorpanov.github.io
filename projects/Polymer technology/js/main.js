@@ -23,6 +23,9 @@ $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         responsiveClass:true,
         margin:10,
+        loop:true,
+        autoplay:true,
+        autoplaySpeed:1000,
         responsive:{
             0:{
                 items:1,

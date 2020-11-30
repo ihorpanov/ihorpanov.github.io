@@ -105,6 +105,10 @@ body section {
   padding-bottom: 100px;
 }
 
+body .profit, body .advantages {
+  padding-bottom: 0;
+}
+
 /* header */
 .header {
   padding-top: 22px;
@@ -307,10 +311,6 @@ body section {
 }
 
 /* profit */
-.profit {
-  padding-bottom: 0;
-}
-
 .profit .profit__slider {
   margin-top: 60px;
   /* custom owl styles */
@@ -461,6 +461,71 @@ body section {
   margin-top: 15px;
 }
 
+/* cleaning-steps */
+.cleaning-steps .cleaning-steps__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 85px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step {
+  position: relative;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 400px;
+  padding: 30px 50px;
+  margin: 0 10px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step p {
+  margin-top: 10px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step:after {
+  position: absolute;
+  content: '1';
+  background: #fff;
+  padding: 25px 0;
+  color: #067C12;
+  font-size: 70px;
+  font-weight: 900;
+  top: -30px;
+  left: -15px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+2):after {
+  content: '2';
+  padding: 30px 10px;
+  top: -35px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+3) {
+  margin-top: 60px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+3):after {
+  content: '3';
+  padding: 30px 10px;
+  top: -35px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+4) {
+  margin-top: 60px;
+}
+
+.cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+4):after {
+  content: '4';
+  padding: 30px 10px;
+  top: -35px;
+}
+
 /* media queries */
 /* Desktops and laptops */
 @media screen and (max-width: 1199px) {
@@ -510,6 +575,26 @@ body section {
   }
   body .advantages .advantages__items .advantages__item:nth-child(n+4) {
     margin-top: 30px;
+  }
+  body .cleaning-steps .cleaning-steps__steps {
+    margin-top: 40px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:after {
+    position: absolute;
+    content: '1';
+    background: #fff;
+    padding: 25px 0;
+    color: #067C12;
+    font-size: 70px;
+    font-weight: 900;
+    top: -30px;
+    left: -15px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+3) {
+    margin-top: 40px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+4) {
+    margin-top: 40px;
   }
 }
 
@@ -579,6 +664,44 @@ body section {
   }
 }
 
+@media screen and (max-width: 865px) {
+  body .cleaning-steps .cleaning-steps__steps {
+    margin-top: 40px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step {
+    width: 70%;
+    margin: 0;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:after {
+    font-size: 55px;
+    padding: 20px 0;
+    top: -25px;
+    left: -8px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+2) {
+    margin-top: 40px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+2):after {
+    padding: 23px 10px;
+    top: -30px;
+    left: -15px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+3) {
+    margin-top: 40px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+3):after {
+    padding: 20px 10px;
+    top: -28px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+4) {
+    margin-top: 40px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step:nth-child(n+4):after {
+    padding: 18px 10px;
+    top: -25px;
+  }
+}
+
 @media screen and (max-width: 835px) {
   body .advantages .advantages__items {
     -ms-flex-pack: distribute;
@@ -605,6 +728,13 @@ body section {
   }
   body .profit .profit__slider .profit__slider-item p {
     font-size: 23px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step {
+    width: 100%;
+    padding: 25px 20px;
+  }
+  body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step h3 {
+    margin-left: 25px;
   }
 }
 

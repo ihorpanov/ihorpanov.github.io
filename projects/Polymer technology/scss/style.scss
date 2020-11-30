@@ -67,6 +67,10 @@ body {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
+    .profit, .advantages {
+        padding-bottom: 0;
+    }
 }
 
 /* header */
@@ -251,8 +255,6 @@ body {
 
 /* profit */
 .profit {
-    padding-bottom: 0;
-
     .profit__slider {
         margin-top: 60px;
 
@@ -380,6 +382,68 @@ body {
     }
 }
 
+/* cleaning-steps */
+.cleaning-steps {
+    .cleaning-steps__steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 85px;
+
+        .cleaning-steps__step {
+            position: relative;
+            text-align: left;
+            border: 1px solid rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            width: 400px;
+            padding: 30px 50px;
+            margin: 0 10px;
+
+            p {
+                margin-top: 10px;
+            }
+
+            &:after {
+                position: absolute;
+                content: '1';
+                background: #fff;
+                padding: 25px 0;
+                color: $secondColor;
+                font-size: 70px;
+                font-weight: 900;
+                top: -30px;
+                left: -15px;
+            }
+
+            &:nth-child(n+2) {
+                &:after {
+                    content: '2';
+                    padding: 30px 10px;
+                    top: -35px;
+                }
+            }
+
+            &:nth-child(n+3) {
+                margin-top: 60px;
+                &:after {
+                    content: '3';
+                    padding: 30px 10px;
+                    top: -35px;
+                }
+            }
+
+            &:nth-child(n+4) {
+                margin-top: 60px;
+                &:after {
+                    content: '4';
+                    padding: 30px 10px;
+                    top: -35px;
+                }
+            }
+        }
+    }
+}
+
 /* media queries */
 
 /* Desktops and laptops */
@@ -479,6 +543,34 @@ body {
                 .advantages__item {
                     &:nth-child(n+4) {
                         margin-top: 30px;
+                    }
+                }
+            }
+        }
+
+        .cleaning-steps {
+            .cleaning-steps__steps {
+                margin-top: 40px;
+        
+                .cleaning-steps__step {
+                    &:after {
+                        position: absolute;
+                        content: '1';
+                        background: #fff;
+                        padding: 25px 0;
+                        color: $secondColor;
+                        font-size: 70px;
+                        font-weight: 900;
+                        top: -30px;
+                        left: -15px;
+                    }
+
+                    &:nth-child(n+3) {
+                        margin-top: 40px;
+                    }
+
+                    &:nth-child(n+4) {
+                        margin-top: 40px;
                     }
                 }
             }
@@ -593,6 +685,56 @@ body {
     }
 }
 
+@media screen and (max-width: 865px) {
+    body {
+        .cleaning-steps {
+            .cleaning-steps__steps {
+                margin-top: 40px;
+        
+                .cleaning-steps__step {
+                    width: 70%;
+                    margin: 0;
+    
+                    &:after {
+                        font-size: 55px;
+                        padding: 20px 0;
+                        top: -25px;
+                        left: -8px;
+                    }
+    
+                    &:nth-child(n+2) {
+                        margin-top: 40px;
+
+                        &:after {
+                            padding: 23px 10px;
+                            top: -30px;
+                            left: -15px;
+                        }
+                    }
+    
+                    &:nth-child(n+3) {
+                        margin-top: 40px;
+
+                        &:after {
+                            padding: 20px 10px;
+                            top: -28px;
+                        }
+                    }
+    
+                    &:nth-child(n+4) {
+                        margin-top: 40px;
+
+                        &:after {
+                            padding: 18px 10px;
+                            top: -25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 835px) {
     body {
         .advantages {
@@ -636,6 +778,19 @@ body {
                 .profit__slider-item {
                     p {
                         font-size: 23px;
+                    }
+                }
+            }
+        }
+
+        .cleaning-steps {
+            .cleaning-steps__steps {
+                .cleaning-steps__step {
+                    width: 100%;
+                    padding: 25px 20px;
+
+                    h3 {
+                        margin-left: 25px;
                     }
                 }
             }
