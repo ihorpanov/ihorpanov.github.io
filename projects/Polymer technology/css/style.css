@@ -109,6 +109,28 @@ body .profit, body .advantages {
   padding-bottom: 0;
 }
 
+body .cta {
+  outline: none;
+  background: #3B49C5;
+  border: none;
+  border-radius: 4px;
+  padding: 13.5px 21px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.3s linear;
+  transition: -webkit-box-shadow 0.3s linear;
+  -o-transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
+}
+
+body .cta:hover, body .cta:focus {
+  -webkit-box-shadow: 0px 0px 10px #3B49C4;
+          box-shadow: 0px 0px 10px #3B49C4;
+}
+
 /* header */
 .header {
   padding-top: 22px;
@@ -287,27 +309,8 @@ body .profit, body .advantages {
   margin-top: 17px;
 }
 
-.header .header__offer .header__cta {
-  outline: none;
+.header .header__offer .cta {
   margin-top: 27px;
-  background: #3B49C5;
-  border: none;
-  border-radius: 4px;
-  padding: 13.5px 21px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  -webkit-transition: -webkit-box-shadow 0.3s linear;
-  transition: -webkit-box-shadow 0.3s linear;
-  -o-transition: box-shadow 0.3s linear;
-  transition: box-shadow 0.3s linear;
-  transition: box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
-}
-
-.header .header__offer .header__cta:hover, .header .header__offer .header__cta:focus {
-  -webkit-box-shadow: 0px 0px 10px #3B49C4;
-          box-shadow: 0px 0px 10px #3B49C4;
 }
 
 /* profit */
@@ -526,6 +529,33 @@ body .profit, body .advantages {
   top: -35px;
 }
 
+/* setion-cta-*/
+.section-cta {
+  background: url(../img/section-cta-bg.jpg);
+}
+
+.section-cta .section-cta__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-cta .section-cta__content br {
+  display: none;
+}
+
+.section-cta .section-cta__content p {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
+
 /* media queries */
 /* Desktops and laptops */
 @media screen and (max-width: 1199px) {
@@ -621,6 +651,9 @@ body .profit, body .advantages {
   body .about .about__content img {
     width: 100%;
     margin-top: 25px;
+  }
+  body .section-cta .section-cta__content p {
+    font-size: 17px;
   }
 }
 
@@ -736,6 +769,17 @@ body .profit, body .advantages {
   body .cleaning-steps .cleaning-steps__steps .cleaning-steps__step h3 {
     margin-left: 25px;
   }
+  body .section-cta .section-cta__content {
+    display: block;
+    text-align: center;
+  }
+  body .section-cta .section-cta__content p {
+    font-size: 19px;
+    line-height: 27px;
+  }
+  body .section-cta .section-cta__content .cta {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -753,6 +797,9 @@ body .profit, body .advantages {
   body .profit .profit__slider .profit__slider-item p {
     font-size: 25px;
   }
+  body .section-cta .section-cta__content br {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 556px) {
@@ -769,19 +816,21 @@ body .profit, body .advantages {
 
 /* Portrait phones and smaller */
 @media screen and (max-width: 479px) {
-  /* header */
-  body .header .header__offer h1 {
-    font-size: 28px;
+  body {
+    /* general */
   }
-  body .header .header__offer .header__cta {
+  body .cta {
     width: 100%;
     padding: 17px 21px;
+  }
+  body .header .header__offer h1 {
+    font-size: 28px;
   }
   body .header .header__offer .header__description {
     font-size: 20px;
     margin-top: 20px;
   }
-  body .header .header__offer .header__cta {
+  body .header .header__offer .cta {
     margin-top: 30px;
   }
   body .about .about__content p {
@@ -790,6 +839,9 @@ body .profit, body .advantages {
 }
 
 @media screen and (max-width: 387px) {
+  body {
+    /* general */
+  }
   body h1 {
     font-size: 27px;
   }
@@ -797,17 +849,20 @@ body .profit, body .advantages {
     font-size: 19px;
     margin-top: 25px;
   }
-  body .header .header__offer .header__cta {
+  body .header .header__offer .cta {
     margin-top: 28px;
   }
 }
 
 @media screen and (max-width: 374px) {
-  body .header .header__offer .header__cta {
-    width: 100%;
+  body {
+    /* general */
   }
   body .header .header__offer .header__description {
     font-size: 17px;
+  }
+  body .header .header__offer .cta {
+    width: 100%;
   }
 }
 
