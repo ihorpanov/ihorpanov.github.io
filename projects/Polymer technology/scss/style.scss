@@ -1142,7 +1142,6 @@ body {
 /* Portrait phones and smaller */
 @media screen and (max-width: 479px) {
     body {
-        /* general */
         .cta {
             width: 100%;
             padding: 17px 21px;
@@ -1192,7 +1191,6 @@ body {
 
 @media screen and (max-width: 387px) {
     body {
-        /* general */
         h1 {
             font-size: 27px;
         }
@@ -1214,8 +1212,6 @@ body {
 
 @media screen and (max-width: 374px) {
     body {
-        /* general */
-
         .header {
             .header__offer {
                 .header__description {
