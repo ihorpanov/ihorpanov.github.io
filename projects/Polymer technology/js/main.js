@@ -20,7 +20,7 @@ burgerButton.addEventListener('click', function () {
 
 $(document).ready(function(){
     /* owl carousel */
-    $(".owl-carousel").owlCarousel({
+    $("#slider-profit").owlCarousel({
         responsiveClass:true,
         margin:10,
         loop:true,
@@ -43,4 +43,29 @@ $(document).ready(function(){
             },
         }
     });
+
+    /* popup projects */
+    $('.projects__item').on('click', function(e) {
+        e.preventDefault();
+
+        $('.overlay').fadeIn();
+        $('.popup-projects').fadeIn();;
+        $('body').addClass('no-scroll');
+    })
+
+    $('.close-popup').on('click', function(e) {
+        e.preventDefault();
+
+        $('.overlay').fadeOut();
+        $('.popup-projects').fadeOut();
+        $('body').removeClass('no-scroll');
+    })
+
+    $('.overlay').on('click', function(e) {
+        e.preventDefault();
+
+        $('.overlay').fadeOut();
+        $('.popup-projects').fadeOut();
+        $('body').removeClass('no-scroll');
+    })
 });
