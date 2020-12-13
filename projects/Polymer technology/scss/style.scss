@@ -685,6 +685,63 @@ body {
     background: rgba(0, 0, 0, 0.9);
 }
 
+/* dealers */
+.dealers {
+    background: url(../img/dealers-bg.jpg) no-repeat;
+    background-size: cover;
+
+    h2 {
+        color: #fff;
+    }
+
+    .dealers__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 60px;
+
+        p {
+            width: 45%;
+            color: #fff;
+        }
+    }
+}
+
+/* other services */
+.other-services {
+    .other-services__slider {
+        margin-top: 40px;
+
+        .other-services__item-wrap {
+            padding: 5px;
+            padding: 20px 20px;
+
+            .other-services__slider-item {
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    
+                .other-services__slider-description {
+                    padding: 25px;
+    
+                    h3 {
+                        &:before {
+                            left: 0;
+                            margin: 0;
+                        }
+                    }
+    
+                    p {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-dots {
+        margin-top: -10px!important;
+    }
+}
+
 .popup-projects {
     display: none;
     position: fixed;
@@ -932,6 +989,12 @@ body {
 
             button {
                 margin-top: 35px;
+            }
+        }
+
+        .other-services {
+            .other-services__slider {
+                margin-top: 15px;
             }
         }
     }
@@ -1214,6 +1277,24 @@ body {
         
                 .work-stages__stage-right {
                     padding: 0 0 0 40px;
+                }
+            }
+        }
+
+        .dealers {
+            .dealers__content {
+                display: block;
+                margin-top: 60px;
+                margin-top: 30px;
+                text-align: center;
+        
+                p {
+                    width: 100%;
+                    color: #fff;
+                }
+
+                .cta {
+                    margin-top: 30px;
                 }
             }
         }

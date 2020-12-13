@@ -44,6 +44,45 @@ $(document).ready(function(){
         }
     });
 
+    $("#other-services__slider").owlCarousel({
+        responsiveClass:true,
+        dotsEach:true,
+        // loop:true,
+        autoplay:true,
+        autoplaySpeed:1000,
+        responsive:{
+            0:{
+                items:1,
+                dots:true,
+            },
+            600:{
+                items:2,
+                dots:true,
+            },
+            1000:{
+                loop:false,
+                items:3,
+            },
+        }
+    });
+
+    // вирівнювання слайдів по висоті
+    function equalHeight(block) {
+        let maxHeight = 0;
+
+        block.each(function() {
+            thisHeight = $(this).height();
+
+            if (thisHeight > maxHeight) {
+                maxHeight = thisHeight;
+            }
+        });
+
+        block.height(maxHeight);
+    };
+
+    equalHeight($('.other-services__slider-item'));
+
     /* popup projects */
     $('.projects__item').on('click', function(e) {
         e.preventDefault();
