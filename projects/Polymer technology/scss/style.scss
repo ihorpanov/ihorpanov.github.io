@@ -673,18 +673,6 @@ body {
     }
 }
 
-/* popups */
-.overlay {
-    display: none;
-    z-index: 999;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.9);
-}
-
 /* dealers */
 .dealers {
     background: url(../img/dealers-bg.jpg) no-repeat;
@@ -740,6 +728,63 @@ body {
     .owl-dots {
         margin-top: -10px!important;
     }
+}
+
+/* faq */
+.faq {
+    background: url(../img/faq-bg.jpg) no-repeat;
+    background-size: cover;
+
+    .title {
+        
+        p {
+            width: 60%;
+            margin: 25px auto 0;
+        }
+    }
+
+    .faq__content {
+        margin: 60px auto 0;
+        width: 85%;
+
+        .faq__question {
+            &:nth-child(n+2) {
+                margin-top: 30px;
+            }
+
+            .faq__ask {
+                cursor: pointer;
+                display: inline-block;
+
+                &:before {
+                    left: 0;
+                    margin: 0;
+                }
+            }
+
+            .faq__answer {
+                margin-top: 15px;
+                // transition: height 0.3s linear;
+                display: none;
+
+                &.faq__answer-hidden {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* popups */
+.overlay {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .popup-projects {
@@ -997,6 +1042,21 @@ body {
                 margin-top: 15px;
             }
         }
+
+        .faq {
+            background: url(../img/faq-bg.jpg) no-repeat;
+            background-size: cover;
+        
+            .faq__content {
+                margin: 30px auto 0;
+        
+                .faq__question {
+                    &:nth-child(n+2) {
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1064,6 +1124,17 @@ body {
         
                 .work-stages__stage-right {
                     padding: 0 0 0 80px;
+                }
+            }
+        }
+
+        .faq {
+            background: url(../img/faq-bg.jpg) no-repeat;
+            background-size: cover;
+        
+            .title {
+                p {
+                    width: 80%;
                 }
             }
         }
@@ -1335,6 +1406,28 @@ body {
             .section-cta__content {
                 br {
                     display: block;
+                }
+            }
+        }
+
+        .faq {
+            background: url(../img/faq-bg.jpg) no-repeat;
+            background-size: cover;
+
+            .title {
+                p {
+                    width: 100%;
+                }
+            }
+        
+            .faq__content {
+                margin: 30px auto 0;
+                width: 100%;
+        
+                .faq__question {
+                    &:nth-child(n+2) {
+                        margin-top: 25px;
+                    }
                 }
             }
         }

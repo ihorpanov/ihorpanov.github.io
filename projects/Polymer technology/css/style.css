@@ -760,18 +760,6 @@ body .cta:hover, body .cta:focus {
   margin: 0;
 }
 
-/* popups */
-.overlay {
-  display: none;
-  z-index: 999;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.9);
-}
-
 /* dealers */
 .dealers {
   background: url(../img/dealers-bg.jpg) no-repeat;
@@ -830,6 +818,57 @@ body .cta:hover, body .cta:focus {
 
 .other-services .owl-dots {
   margin-top: -10px !important;
+}
+
+/* faq */
+.faq {
+  background: url(../img/faq-bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.faq .title p {
+  width: 60%;
+  margin: 25px auto 0;
+}
+
+.faq .faq__content {
+  margin: 60px auto 0;
+  width: 85%;
+}
+
+.faq .faq__content .faq__question:nth-child(n+2) {
+  margin-top: 30px;
+}
+
+.faq .faq__content .faq__question .faq__ask {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.faq .faq__content .faq__question .faq__ask:before {
+  left: 0;
+  margin: 0;
+}
+
+.faq .faq__content .faq__question .faq__answer {
+  margin-top: 15px;
+  display: none;
+}
+
+.faq .faq__content .faq__question .faq__answer.faq__answer-hidden {
+  display: block;
+}
+
+/* popups */
+.overlay {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .popup-projects {
@@ -1015,6 +1054,16 @@ body .cta:hover, body .cta:focus {
   body .other-services .other-services__slider {
     margin-top: 15px;
   }
+  body .faq {
+    background: url(../img/faq-bg.jpg) no-repeat;
+    background-size: cover;
+  }
+  body .faq .faq__content {
+    margin: 30px auto 0;
+  }
+  body .faq .faq__content .faq__question:nth-child(n+2) {
+    margin-top: 25px;
+  }
 }
 
 /* Tablets */
@@ -1049,6 +1098,13 @@ body .cta:hover, body .cta:focus {
   }
   body .work-stages .work-stages__chronology .work-stages__stage-right {
     padding: 0 0 0 80px;
+  }
+  body .faq {
+    background: url(../img/faq-bg.jpg) no-repeat;
+    background-size: cover;
+  }
+  body .faq .title p {
+    width: 80%;
   }
 }
 
@@ -1219,6 +1275,20 @@ body .cta:hover, body .cta:focus {
   }
   body .section-cta .section-cta__content br {
     display: block;
+  }
+  body .faq {
+    background: url(../img/faq-bg.jpg) no-repeat;
+    background-size: cover;
+  }
+  body .faq .title p {
+    width: 100%;
+  }
+  body .faq .faq__content {
+    margin: 30px auto 0;
+    width: 100%;
+  }
+  body .faq .faq__content .faq__question:nth-child(n+2) {
+    margin-top: 25px;
   }
 }
 

@@ -67,28 +67,26 @@ $(document).ready(function(){
     });
 
     // вирівнювання слайдів по висоті
-    function equalHeight(block) {
-        let maxHeight = 0;
+    $(window).on("resize", function () {
+        var maxH = 0;  
+        $('.other-services__slider-description').each(function(){
+            $(this).css('height','auto');
 
-        block.each(function() {
-            thisHeight = $(this).height();
-
-            if (thisHeight > maxHeight) {
-                maxHeight = thisHeight;
+            console.log($(this).height());
+            if ( $(this).height() > maxH ) {
+                maxH = $(this).height();
             }
         });
 
-        block.height(maxHeight);
-    };
-
-    equalHeight($('.other-services__slider-item'));
+        $('.other-services__slider-description').height(maxH);
+    }).resize();
 
     /* popup projects */
     $('.projects__item').on('click', function(e) {
         e.preventDefault();
 
         $('.overlay').fadeIn();
-        $('.popup-projects').fadeIn();;
+        $('.popup-projects').fadeIn();
         $('body').addClass('no-scroll');
     })
 
@@ -107,4 +105,9 @@ $(document).ready(function(){
         $('.popup-projects').fadeOut();
         $('body').removeClass('no-scroll');
     })
+
+    /* faq hidden */
+    $('.faq__question').on('click', '.faq__ask', function() {
+		$(this).toggleClass('faq__answer-hidden').siblings('.faq__answer').slideToggle(300);
+	});
 });
