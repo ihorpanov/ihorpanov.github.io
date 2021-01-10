@@ -423,13 +423,64 @@
             </div>
         </div>
     </section>
-    <!-- <footer>
-        <div class="container"></div>
-    </footer> -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer__nav">
+                <div class="footer__site-map">
+                    <h3>Карта сайта</h3>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#" class="footer__menu-link">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">Преимущества</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">Проекты</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">Все услуги</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">Сотрудничество</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">Частые вопросы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <h3>Контакты</h3>
+                    <div class="footer__contacts-wrap">
+                        <a href="tel:066-777-59-29" class="footer__phone-number">066-777-59-29</a>
+                        <a href="tel:066-777-59-29" class="footer__phone-number">066-777-59-29</a>
+                        <a href="tel:066-777-59-29" class="footer__phone-number">066-777-59-29</a>
+                        <p class="footer__email-addres">polymer-tech@gmail.com</p>
+                        <div class="footer__social">
+                            <a href="#" class="footer__inst">
+                                <img src="img/social-instagram.svg" alt="Instagram">
+                            </a>
+                            <a href="#" class="footer__fb">
+                                <img src="img/social-facebook.svg" alt="Facebook">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="footer__links">
+                    <button class="cta">Заказать консультацию</button>
+                    <a href="#" class="footer__logo">
+                        <img src="img/logo.svg" alt="Логотип">
+                    </a>
+                    <p>Создание сайта: <a href="#">Igor Panov</a> - 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- popups -->
     <div class="overlay" id="overlay"></div>
-    <div class="popup-projects">
+    <div class="popup-projects popup">
         <div class="close-popup"></div>
         <div class="title">
             <h3>Автономная канализация</h3>
@@ -448,6 +499,18 @@
             <a href="img/project-slide4.jpg" data-fancybox="images" data-caption="Тур. база “Солнышко” в Харьковской области">
                 <img src="img/project-slide4.jpg" alt="фото"/>
             </a>
+        </div>
+    </div>
+    <div class="popup-form popup">
+        <div class="close-popup"></div>
+        <div class="title">
+            <h3>Заполните форму,<br>мы Вам перезвоним</h3>
+            <form action="mail.php" method="POST">
+                <input class="popup-form__name" type="text" name="name" placeholder="Имя">
+                <input class="popup-form__phone" type="tel" name="phone" placeholder="Телефон">
+                <textarea class="popup-form__comment" type="text" name="comment" placeholder="Ваш вопрос (по желанию)"></textarea>
+                <button type="submit">Заказать звонок</button>
+            </form>
         </div>
     </div>
 

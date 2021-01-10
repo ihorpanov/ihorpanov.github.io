@@ -81,6 +81,11 @@ $(document).ready(function(){
         $('.other-services__slider-description').height(maxH);
     }).resize();
 
+    /* faq hidden */
+    $('.faq__question').on('click', '.faq__ask', function() {
+		$(this).toggleClass('faq__answer-hidden').siblings('.faq__answer').slideToggle(300);
+	});
+
     /* popup projects */
     $('.projects__item').on('click', function(e) {
         e.preventDefault();
@@ -106,8 +111,28 @@ $(document).ready(function(){
         $('body').removeClass('no-scroll');
     })
 
-    /* faq hidden */
-    $('.faq__question').on('click', '.faq__ask', function() {
-		$(this).toggleClass('faq__answer-hidden').siblings('.faq__answer').slideToggle(300);
-	});
+    /* popup form */
+    $('.cta').on('click', function(e) {
+        e.preventDefault();
+
+        $('.overlay').fadeIn();
+        $('.popup-form').fadeIn();
+        $('body').addClass('no-scroll');
+    })
+
+    $('.close-popup').on('click', function(e) {
+        e.preventDefault();
+
+        $('.overlay').fadeOut();
+        $('.popup-form').fadeOut();
+        $('body').removeClass('no-scroll');
+    })
+
+    $('.overlay').on('click', function(e) {
+        e.preventDefault();
+
+        $('.overlay').fadeOut();
+        $('.popup-form').fadeOut();
+        $('body').removeClass('no-scroll');
+    })
 });
