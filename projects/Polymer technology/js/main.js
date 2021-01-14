@@ -19,6 +19,14 @@ burgerButton.addEventListener('click', function () {
 });
 
 $(document).ready(function(){
+    /* прокрутка по якорям */
+    $("#menu, #footer-menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
     /* owl carousel */
     $("#slider-profit").owlCarousel({
         responsiveClass:true,

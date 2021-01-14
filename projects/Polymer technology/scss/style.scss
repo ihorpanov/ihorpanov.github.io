@@ -1276,6 +1276,22 @@ body {
             }
         }
 
+        .projects {
+            .projects__items {
+                .projects__item {
+                    &:hover {
+                        .projects__description {
+                            opacity: 0;
+                        }
+                    }
+        
+                    .projects__description {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
         .work-stages {
             .work-stages__chronology {
                 .work-stages__stage-left {
