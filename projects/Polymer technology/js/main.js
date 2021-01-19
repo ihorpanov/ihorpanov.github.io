@@ -143,4 +143,21 @@ $(document).ready(function(){
         $('.popup-form').fadeOut();
         $('body').removeClass('no-scroll');
     })
+
+    /* load more */
+    $(function(){
+        $(".projects__item").slice(0, 8).show(); // select the first ten
+
+        $(".load-more").click(function(e){ // click event for load more
+            e.preventDefault();
+
+            if ($(".projects__item:hidden").length == 0){ // check if any hidden divs still exist
+                $(".load-more").blur();  /* убираем фокус с кнопки */
+                $(".thats-all").show();
+            } else {
+                $(".projects__item:hidden").slice(0, 8).show(); // select next 10 hidden divs and show them
+                $(".load-more").blur();  /* убираем фокус с кнопки */
+            }
+        });
+    });
 });

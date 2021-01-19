@@ -584,6 +584,7 @@ body .cta:hover, body .cta:focus {
   position: relative;
   margin: 0 10px;
   height: 270px;
+  display: none;
 }
 
 .projects .projects__items .projects__item img {
@@ -647,6 +648,11 @@ body .cta:hover, body .cta:focus {
 .projects button:hover, .projects button:focus {
   background: #067C12;
   color: #fff;
+}
+
+.projects .thats-all {
+  margin-top: 30px;
+  display: none;
 }
 
 /* work stages */

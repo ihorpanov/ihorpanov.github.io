@@ -492,6 +492,7 @@ body {
             position: relative;
             margin: 0 10px;
             height: 270px;
+            display: none;
 
             img {
                 height: 100%;
@@ -548,6 +549,11 @@ body {
             background: $secondColor;
             color: #fff;
         }
+    }
+
+    .thats-all {
+        margin-top: 30px;
+        display: none;
     }
 }
 
