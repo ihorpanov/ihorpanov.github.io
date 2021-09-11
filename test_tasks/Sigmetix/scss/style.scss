@@ -9,16 +9,112 @@ $main-color: #f26522;
 $title: #333;
 $main-text: #898989;
 $placeholder: #bdbdbd;
+$radius-shadow: rgba(64, 199, 255, 0.3);
+
+/* templates */
+%tplform-wrap {
+    position: relative;
+    z-index: 999;
+    margin: 50px auto 0;
+    padding: 20px;
+    width: 753px;
+    background: rgba(0, 0, 0, 0.5);
+
+    form {
+        display: flex;
+
+        input {
+            height: 100%;
+            padding: 25px 23px;
+            width: 70%;
+            outline: none;
+            box-sizing: border-box;
+            border: none;
+            font-size: 16px;
+            color: $title;
+
+            &::placeholder {
+                color: $placeholder;
+            }
+        }
+
+        button {
+            border: none;
+            width: 30%;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            background: $main-color;
+            cursor: pointer;
+        
+            &:hover {
+                background: #fc7232;
+            }
+        }
+    }
+}
+
+%tplcards {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+%tplcard {
+    padding: 50px 33px;
+    width: 370px;
+    box-shadow: 0 0 24px $radius-shadow;
+    box-sizing: border-box;
+}
 
 /* general */
 body {
     color: $main-text;
     font-family: Roboto, sans-serif;
     font-size: 16px;
-}
-.container {
-    max-width: 1170px;
-    margin: 0 auto;
+    font-weight: 400;
+
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+
+        h2 {
+            color: $title;
+            font-size: 40px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: 280px;
+                bottom: -25px;
+                left: -24px;
+                background: #cacaca;
+            }
+
+            &:after {
+                position: absolute;
+                content: '';
+                height: 7px;
+                width: 100px;
+                background: $main-color;
+                bottom: -28px;
+                left: 66px;
+            }
+        }
+
+        h3 {
+            color: $main-color;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 26px;
+            margin-top: 30px;
+        }
+    }
 }
 
 /* header */
@@ -141,45 +237,7 @@ header {
         }
 
         .header__form-wrap {
-            position: relative;
-            z-index: 999;
-            margin: 50px auto 0;
-            padding: 20px;
-            width: 753px;
-            background: rgba(0, 0, 0, 0.5);
-
-            form {
-                display: flex;
-
-                input {
-                    height: 100%;
-                    padding: 25px 23px;
-                    width: 70%;
-                    outline: none;
-                    box-sizing: border-box;
-                    border: none;
-                    font-size: 16px;
-                    color: $title;
-
-                    &::placeholder {
-                        color: $placeholder;
-                    }
-                }
-    
-                button {
-                    border: none;
-                    width: 30%;
-                    color: #fff;
-                    font-weight: bold;
-                    font-size: 18px;
-                    background: $main-color;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: #fc7232;
-                    }
-                }
-            }
+            @extend %tplform-wrap;
         }
 
         .header__house {
@@ -194,6 +252,42 @@ header {
             bottom: 0;
             right: 0;
             z-index: 0;
+        }
+    }
+}
+
+/* features */
+.features {
+    padding: 100px 0;
+    background: #fff;
+    text-align: center;
+
+    .features__cards {
+        @extend %tplcards;
+
+        .features__card {
+            @extend %tplcard;
+
+            .features__logo-wrap {
+                display: flex;
+                margin: 0 auto;
+                align-items: center;
+                justify-content: space-around;
+                width: 125px;
+                height: 125px;
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 0 0 6px $radius-shadow;
+
+                img {
+                    height: 50%;
+                }
+            }
+
+            p {
+                line-height: 25px;
+                margin-top: 15px;
+            }
         }
     }
 }

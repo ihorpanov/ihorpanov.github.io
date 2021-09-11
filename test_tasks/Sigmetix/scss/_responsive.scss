@@ -11,12 +11,27 @@
             }
         }
     }
+
+    /* features */
 }
 
 @media screen and (max-width: 1199px) {
     /* general */
     .container {
         width: 97%;
+    }
+}
+
+@media screen and (max-width: 1144px) {
+    /* templates */
+    %tplcards {
+        justify-content: space-around;
+    }
+
+    %tplcard {
+        &:last-child {
+            margin-top: 50px;
+        }
     }
 }
 
@@ -40,9 +55,27 @@
             }
         }
     }
+
+    /* features */
+}
+
+@media screen and (max-width: 874px) {
+    /* templates */
+    %tplcards {
+        display: block;
+    }
+
+    %tplcard {
+        margin: 50px auto 0;
+    }
 }
 
 @media screen and (max-width: 900px) {
+    /* templates */
+    %tplform-wrap {
+        width: auto;
+    }
+    
     /* header */
     header {
         .header__nav {
@@ -62,16 +95,31 @@
                 }
             }
         }
-
-        .header__offer {
-            .header__form-wrap {
-                width: auto;
-            }
-        }
     }
+
+    /* features */
 }
 
 @media screen and (max-width: 767px) {
+    /* templates */
+    %tplform-wrap {
+        background: rgba(0, 0, 0, 0);
+
+        form {
+            display: block;
+
+            input {
+                width: 100%;
+            }
+
+            button {
+                margin-top: 25px;
+                width: 100%;
+                border: 1px solid #fff;
+                padding: 25px;
+            }
+        }
+    }
 
     /* header */
     header {
@@ -108,34 +156,31 @@
             h1 {
                 font-size: 40px;
             }
-
-            .header__form-wrap {
-                background: rgba(0, 0, 0, 0);
-
-                form {
-                    display: block;
-
-                    input {
-                        width: 100%;
-                    }
-
-                    button {
-                        margin-top: 25px;
-                        width: 100%;
-                        border: 1px solid #fff;
-                        padding: 25px;
-                    }
-                }
-            }
         }
     }
+
+    /* features */
 }
 
 @media screen and (max-width: 480px) {
+    /* templates */
+    %tplcard {
+        width: 90%;
+        // padding: 30px 15px;
+    }
+
+    /* header */
     header {
         .header__offer {
             padding-top: 100px;
             padding-bottom: 150px;
         }
+    }
+
+    /* features */
+    .features {
+        padding: 70px 0;
+
+        
     }
 }
