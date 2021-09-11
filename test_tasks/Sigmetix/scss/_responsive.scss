@@ -77,13 +77,16 @@
     header {
         .header__nav {
             display: block;
-            padding-bottom: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             
             .header__menu {
                 display: none;
                 text-align: center;
 
                 .header__list {
+                    margin-bottom: 25px;
+
                     li {
                         margin-left: 0;
                         margin-top: 20px;
@@ -94,6 +97,7 @@
     
             .header__burger-menu {
                 display: block;
+                top: 30px;
             }
         }
 
