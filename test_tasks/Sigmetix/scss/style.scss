@@ -69,6 +69,33 @@ $radius-shadow: rgba(64, 199, 255, 0.3);
     background: #fff;
 }
 
+%tplquestions-block {
+    width: 385px;
+    color: #fff;
+    text-align: left;
+    line-height: 23px;
+}
+
+%tplquestion-block {
+    background: $main-color;
+    padding: 20px 15px 15px 63px;
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+        margin-top: 1px;
+    }
+}
+
+%tplrequest-img {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 15px;
+}
+
 /* general */
 body {
     color: $main-text;
@@ -297,7 +324,6 @@ header {
 
 /* steps */
 .steps {
-    border: 1px solid red;
     padding: 100px 0 355px;
     text-align: center;
     background: #f6f6f6;
@@ -355,6 +381,87 @@ header {
         bottom: 0;
         right: 0;
         z-index: 0;
+    }
+}
+
+/* questions */
+.questions {
+    border: 1px solid red;
+    padding: 220px 0 335px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .questions__requests {
+            @extend %tplquestions-block;
+
+            .questions__title {
+                background: $main-color;
+                padding: 20px 15px 15px;
+            }
+
+            .questions__request {
+                background: $main-color;
+                padding: 20px 15px 15px;
+                margin-top: 1px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .questions__responses-hc {
+            @extend %tplquestions-block;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            box-sizing: border-box;
+
+            .questions__title {
+                background: $main-color;
+                padding: 20px 15px 15px;
+                font-size: 22px;
+                font-weight: bold;
+
+                h3 {
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+
+            .questions__response-hc {
+                @extend %tplquestion-block;
+                position: relative;
+
+                img {
+                    @extend %tplrequest-img;
+                }
+            }
+        }
+
+        .questions__responses-other {
+            @extend %tplquestions-block;
+
+            .questions__title {
+                background: $main-color;
+                padding: 20px 15px 15px;
+                font-size: 22px;
+                font-weight: bold;
+
+                h3 {
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+
+            .questions__response-other {
+                @extend %tplquestion-block;
+                position: relative;
+
+                img {
+                    @extend %tplrequest-img;
+                }
+            }
+        }
     }
 }
 

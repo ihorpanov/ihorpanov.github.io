@@ -123,6 +123,37 @@ header .header__offer .header__form-wrap form button:hover {
   background: #fff;
 }
 
+.questions .container .questions__requests, .questions .container .questions__responses-hc, .questions .container .questions__responses-other {
+  width: 385px;
+  color: #fff;
+  text-align: left;
+  line-height: 23px;
+}
+
+.questions .container .questions__responses-hc .questions__response-hc, .questions .container .questions__responses-other .questions__response-other {
+  background: #f26522;
+  padding: 20px 15px 15px 63px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.questions .container .questions__responses-hc .questions__response-hc:not(:first-child), .questions .container .questions__responses-other .questions__response-other:not(:first-child) {
+  margin-top: 1px;
+}
+
+.questions .container .questions__responses-hc .questions__response-hc img, .questions .container .questions__responses-other .questions__response-other img {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  left: 15px;
+}
+
 /* general */
 body {
   color: #898989;
@@ -355,7 +386,6 @@ header .header__offer .header__hill {
 
 /* steps */
 .steps {
-  border: 1px solid red;
   padding: 100px 0 355px;
   text-align: center;
   background: #f6f6f6;
@@ -404,6 +434,77 @@ header .header__offer .header__hill {
   bottom: 0;
   right: 0;
   z-index: 0;
+}
+
+/* questions */
+.questions {
+  border: 1px solid red;
+  padding: 220px 0 335px;
+}
+
+.questions .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.questions .container .questions__requests .questions__title {
+  background: #f26522;
+  padding: 20px 15px 15px;
+}
+
+.questions .container .questions__requests .questions__request {
+  background: #f26522;
+  padding: 20px 15px 15px;
+  margin-top: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.questions .container .questions__responses-hc {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.questions .container .questions__responses-hc .questions__title {
+  background: #f26522;
+  padding: 20px 15px 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.questions .container .questions__responses-hc .questions__title h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.questions .container .questions__responses-hc .questions__response-hc {
+  position: relative;
+}
+
+.questions .container .questions__responses-other .questions__title {
+  background: #f26522;
+  padding: 20px 15px 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.questions .container .questions__responses-other .questions__title h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.questions .container .questions__responses-other .questions__response-other {
+  position: relative;
 }
 
 /* media queries */
@@ -456,6 +557,10 @@ header .header__offer .header__hill {
     left: 0;
     margin-left: 0;
     bottom: 0;
+  }
+  /* questions */
+  .questions {
+    padding: 100px 0;
   }
 }
 
@@ -539,9 +644,14 @@ header .header__offer .header__hill {
   .steps .steps__house {
     width: 60%;
   }
+  /* questions */
+  .questions .container .questions__requests, .questions .container .questions__responses-hc, .questions .container .questions__responses-other {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 639px) {
+  /* steps */
   .steps {
     padding: 100px 0 700px;
   }
@@ -554,6 +664,9 @@ header .header__offer .header__hill {
   /* templates */
   .features .features__cards .features__card, .steps .container .steps__cards .steps__card {
     width: 90%;
+  }
+  .questions .container .questions__responses-hc .questions__response-hc, .questions .container .questions__responses-other .questions__response-other {
+    padding: 0 15px 0 63px;
   }
   /* header */
   header .header__offer {
@@ -570,5 +683,15 @@ header .header__offer .header__hill {
   }
   .steps .container .steps__movie {
     bottom: 100px;
+  }
+  /* questions */
+  .questions {
+    padding: 70px 0;
+  }
+  .questions .container {
+    overflow-x: auto;
+  }
+  .questions .container .questions__requests .questions__request {
+    padding: 0 15px;
   }
 }

@@ -75,6 +75,11 @@
             }
         }
     }
+
+    /* questions */
+    .questions {
+        padding: 100px 0;
+    }
 }
 
 @media screen and (max-width: 874px) {
@@ -189,9 +194,15 @@
             width: 60%;
         }
     }
+
+    /* questions */
+    %tplquestions-block {
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 639px) {
+    /* steps */
     .steps {
         padding: 100px 0 700px;
 
@@ -207,7 +218,10 @@
     /* templates */
     %tplcard {
         width: 90%;
-        // padding: 30px 15px;
+    }
+
+    %tplquestion-block {
+        padding: 0 15px 0 63px;
     }
 
     /* header */
@@ -230,6 +244,21 @@
         .container {
             .steps__movie {
                 bottom: 100px;
+            }
+        }
+    }
+
+    
+    /* questions */
+    .questions {
+        padding: 70px 0;
+        .container {
+            overflow-x: auto;
+
+            .questions__requests {
+                .questions__request {
+                    padding: 0 15px;
+                }
             }
         }
     }
