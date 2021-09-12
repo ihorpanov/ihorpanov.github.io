@@ -44,7 +44,7 @@ table {
 
 /* variables */
 /* templates */
-header .header__offer .header__form-wrap {
+header .header__offer .header__form-wrap, .subscribe .subscribe__form-wrap {
   position: relative;
   z-index: 999;
   margin: 50px auto 0;
@@ -53,13 +53,13 @@ header .header__offer .header__form-wrap {
   background: rgba(0, 0, 0, 0.5);
 }
 
-header .header__offer .header__form-wrap form {
+header .header__offer .header__form-wrap form, .subscribe .subscribe__form-wrap form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header .header__offer .header__form-wrap form input {
+header .header__offer .header__form-wrap form input, .subscribe .subscribe__form-wrap form input {
   height: 100%;
   padding: 25px 23px;
   width: 70%;
@@ -71,23 +71,23 @@ header .header__offer .header__form-wrap form input {
   color: #333;
 }
 
-header .header__offer .header__form-wrap form input::-webkit-input-placeholder {
+header .header__offer .header__form-wrap form input::-webkit-input-placeholder, .subscribe .subscribe__form-wrap form input::-webkit-input-placeholder {
   color: #bdbdbd;
 }
 
-header .header__offer .header__form-wrap form input:-ms-input-placeholder {
+header .header__offer .header__form-wrap form input:-ms-input-placeholder, .subscribe .subscribe__form-wrap form input:-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-header .header__offer .header__form-wrap form input::-ms-input-placeholder {
+header .header__offer .header__form-wrap form input::-ms-input-placeholder, .subscribe .subscribe__form-wrap form input::-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-header .header__offer .header__form-wrap form input::placeholder {
+header .header__offer .header__form-wrap form input::placeholder, .subscribe .subscribe__form-wrap form input::placeholder {
   color: #bdbdbd;
 }
 
-header .header__offer .header__form-wrap form button {
+header .header__offer .header__form-wrap form button, .subscribe .subscribe__form-wrap form button {
   border: none;
   width: 30%;
   color: #fff;
@@ -97,7 +97,7 @@ header .header__offer .header__form-wrap form button {
   cursor: pointer;
 }
 
-header .header__offer .header__form-wrap form button:hover {
+header .header__offer .header__form-wrap form button:hover, .subscribe .subscribe__form-wrap form button:hover {
   background: #fc7232;
 }
 
@@ -438,7 +438,6 @@ header .header__offer .header__hill {
 
 /* questions */
 .questions {
-  border: 1px solid red;
   padding: 220px 0 335px;
 }
 
@@ -507,6 +506,259 @@ header .header__offer .header__hill {
   position: relative;
 }
 
+/* subscribe */
+.subscribe {
+  padding: 140px 0 170px;
+  text-align: center;
+  background: #f26522;
+  position: relative;
+}
+
+.subscribe p {
+  color: #f2f2f2;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 34px;
+}
+
+.subscribe p span {
+  font-size: 24px;
+}
+
+.subscribe .subscribe__form-wrap {
+  margin-top: 35px;
+}
+
+.subscribe .subscribe__form-wrap form {
+  position: relative;
+}
+
+.subscribe .subscribe__form-wrap form input {
+  padding-left: 67px;
+}
+
+.subscribe .subscribe__form-wrap form img {
+  position: absolute;
+  width: 32px;
+  height: 30px;
+  top: 50%;
+  margin-top: -15px;
+  left: 22px;
+}
+
+.subscribe .subscribe__house {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  z-index: 0;
+}
+
+/* forms */
+.forms {
+  padding: 100px 0;
+  position: relative;
+}
+
+.forms .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 999;
+}
+
+.forms .container .forms__sell {
+  -webkit-box-shadow: 0 0 24px rgba(64, 199, 255, 0.3);
+          box-shadow: 0 0 24px rgba(64, 199, 255, 0.3);
+  width: 470px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 473px;
+  padding: 60px 30px 100px;
+}
+
+.forms .container .forms__sell h3 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #f26522;
+  margin: 0;
+}
+
+.forms .container .forms__sell p {
+  font-size: 20px;
+  color: 707070;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.forms .container .forms__sell form {
+  margin-top: 50px;
+}
+
+.forms .container .forms__sell form input {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #eff2f2;
+  padding: 22px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.forms .container .forms__sell form input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__sell form input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__sell form input::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__sell form input::placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__sell form button {
+  margin-top: 33px;
+  background: #f26522;
+  color: #fff;
+  width: 100%;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.forms .container .forms__sell form button:hover {
+  background: #fc7232;
+}
+
+.forms .container .forms__touch {
+  -webkit-box-shadow: 0 0 24px rgba(64, 199, 255, 0.3);
+          box-shadow: 0 0 24px rgba(64, 199, 255, 0.3);
+  width: 670px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 39px 30px 30px;
+  background: #fff;
+}
+
+.forms .container .forms__touch h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.forms .container .forms__touch form {
+  margin-top: 28px;
+  text-align: right;
+}
+
+.forms .container .forms__touch form input {
+  border: 1px solid #cff0ff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  padding: 18px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.forms .container .forms__touch form input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form input::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form input::placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form input:not(:first-child) {
+  margin-top: 15px;
+}
+
+.forms .container .forms__touch form .forms__msg {
+  min-height: 210px;
+  border: 1px solid #cff0ff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  padding: 18px;
+  display: block;
+  width: 100%;
+  margin-top: 19px;
+  resize: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+.forms .container .forms__touch form .forms__msg::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form .forms__msg:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form .forms__msg::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form .forms__msg::placeholder {
+  color: #bdbdbd;
+}
+
+.forms .container .forms__touch form button {
+  margin-top: 30px;
+  background: #f26522;
+  color: #fff;
+  padding: 18px 57px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.forms .container .forms__touch form button:hover {
+  background: #fc7232;
+}
+
+.forms .forms__house {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  z-index: 0;
+}
+
+/* footer */
+footer {
+  padding: 40px 0;
+  background: #1e1e1e;
+  text-align: center;
+}
+
+footer p {
+  color: #bdbdbd;
+  line-height: 30px;
+}
+
 /* media queries */
 @media screen and (max-width: 1439px) {
   /* header */
@@ -516,12 +768,26 @@ header .header__offer .header__hill {
   header .header__offer .header__hill {
     width: 67%;
   }
+  /* subscribe */
+  .subscribe .subscribe__house {
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 1199px) {
   /* general */
   .container {
     width: 97%;
+  }
+  /* forms */
+  .forms .container {
+    display: block;
+  }
+  .forms .container .forms__sell {
+    margin: 0 auto;
+  }
+  .forms .container .forms__touch {
+    margin: 70px auto 0;
   }
 }
 
@@ -562,6 +828,10 @@ header .header__offer .header__hill {
   .questions {
     padding: 100px 0;
   }
+  /* forms */
+  .forms .forms__house {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 874px) {
@@ -576,7 +846,7 @@ header .header__offer .header__hill {
 
 @media screen and (max-width: 900px) {
   /* templates */
-  header .header__offer .header__form-wrap {
+  header .header__offer .header__form-wrap, .subscribe .subscribe__form-wrap {
     width: auto;
   }
   /* header */
@@ -590,16 +860,16 @@ header .header__offer .header__hill {
 
 @media screen and (max-width: 767px) {
   /* templates */
-  header .header__offer .header__form-wrap {
+  header .header__offer .header__form-wrap, .subscribe .subscribe__form-wrap {
     background: rgba(0, 0, 0, 0);
   }
-  header .header__offer .header__form-wrap form {
+  header .header__offer .header__form-wrap form, .subscribe .subscribe__form-wrap form {
     display: block;
   }
-  header .header__offer .header__form-wrap form input {
+  header .header__offer .header__form-wrap form input, .subscribe .subscribe__form-wrap form input {
     width: 100%;
   }
-  header .header__offer .header__form-wrap form button {
+  header .header__offer .header__form-wrap form button, .subscribe .subscribe__form-wrap form button {
     margin-top: 25px;
     width: 100%;
     border: 1px solid #fff;
@@ -648,6 +918,28 @@ header .header__offer .header__hill {
   .questions .container .questions__requests, .questions .container .questions__responses-hc, .questions .container .questions__responses-other {
     width: auto;
   }
+  /* subscribe */
+  .subscribe {
+    padding-top: 70px;
+  }
+  .subscribe .subscribe__form-wrap form img {
+    top: 18%;
+  }
+  .subscribe .subscribe__house {
+    width: 60%;
+  }
+  /* forms */
+  .forms .container .forms__sell {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .forms .container .forms__sell h3 {
+    line-height: 50px;
+  }
+  .forms .container .forms__touch {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 639px) {
@@ -693,5 +985,9 @@ header .header__offer .header__hill {
   }
   .questions .container .questions__requests .questions__request {
     padding: 0 15px;
+  }
+  /* forms */
+  .forms {
+    padding: 70px 0 130px;
   }
 }
