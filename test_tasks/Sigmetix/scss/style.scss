@@ -62,10 +62,11 @@ $radius-shadow: rgba(64, 199, 255, 0.3);
 }
 
 %tplcard {
-    padding: 50px 33px;
+    padding: 50px 10px;
     width: 370px;
     box-shadow: 0 0 24px $radius-shadow;
     box-sizing: border-box;
+    background: #fff;
 }
 
 /* general */
@@ -92,7 +93,8 @@ body {
                 height: 1px;
                 width: 280px;
                 bottom: -25px;
-                left: -24px;
+                left: -140px;
+                margin-left: 50%;
                 background: #cacaca;
             }
 
@@ -103,13 +105,14 @@ body {
                 width: 100px;
                 background: $main-color;
                 bottom: -28px;
-                left: 66px;
+                left: -50px;
+                margin-left: 50%;
             }
         }
 
         h3 {
             color: $main-color;
-            font-size: 24px;
+            font-size: 23px;
             font-weight: bold;
             line-height: 26px;
             margin-top: 30px;
@@ -289,6 +292,69 @@ header {
                 margin-top: 15px;
             }
         }
+    }
+}
+
+/* steps */
+.steps {
+    border: 1px solid red;
+    padding: 100px 0 355px;
+    text-align: center;
+    background: #f6f6f6;
+    position: relative;
+
+    .container {
+        h2 {
+            &:before {
+                background: #fff;
+            }
+        }
+    
+        .steps__cards {
+            @extend %tplcards;
+            position: relative;
+            z-index: 999;
+    
+            .steps__card {
+                @extend %tplcard;
+    
+                p {
+                    &:first-child {
+                        margin: 0 auto;
+                        font-size: 36px;
+                        color: $main-color;
+                        font-weight: bold;
+                    }
+    
+                    &:last-child {
+                        line-height: 25px;
+                    margin-top: 15px;
+                    }
+                }
+            }
+        }
+        .steps__movie {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -455px;
+            bottom: -150px;
+            z-index: 9999;
+        }
+    }
+
+    .steps__house {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .steps__hand {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
     }
 }
 

@@ -1,3 +1,4 @@
+/* burger-menu */
 let burgerButton = document.querySelector('.header__burger-menu');
 let mobileMenu = document.querySelector('.header__menu');
 let mobileMenuList = document.querySelector('.header__list');
