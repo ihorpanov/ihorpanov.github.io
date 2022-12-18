@@ -40,9 +40,32 @@ button {
   border: none;
   padding: 0;
 }
+/* ------------------------------------ !Titles ------------------------------------ */
+.title-wrapper {
+  h3 {
+    font-size: 35px;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 10px;
+    color: $black;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      max-width: 60px;
+      height: 2px;
+      background: $color-primary;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
 /* ------------------------------------ !Header ------------------------------------ */
 header {
   height: 100vh;
+  min-height: 440px;
   background: url('../img/header-bg.jpg') no-repeat;
   background-size: cover;
   background-position: 50% 70%;
@@ -262,7 +285,7 @@ header {
       margin: 0 auto;
       font-size: 35px;
       color: $white;
-      animation: arrowLight 2.5s infinite;
+      animation: arrowLight 2s infinite;
       @include smoothAnimation(.2s);
       i {
         font-family: $font-awesome;

@@ -112,7 +112,7 @@ table {
     text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.5);
   }
   50% {
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
   }
   100% {
     text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.5);
@@ -124,7 +124,7 @@ table {
     text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.5);
   }
   50% {
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
   }
   100% {
     text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.5);
@@ -220,9 +220,36 @@ button {
   padding: 0;
 }
 
+/* ------------------------------------ !Titles ------------------------------------ */
+.title-wrapper h3 {
+  font-size: 35px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 10px;
+  color: #000;
+}
+
+.title-wrapper h3:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  max-width: 60px;
+  height: 2px;
+  background: #5100ca;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 /* ------------------------------------ !Header ------------------------------------ */
 header {
   height: 100vh;
+  min-height: 440px;
   background: url("../img/header-bg.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 70%;
@@ -552,8 +579,8 @@ header .header-wrapper .arrow-down {
   margin: 0 auto;
   font-size: 35px;
   color: #fff;
-  -webkit-animation: arrowLight 2.5s infinite;
-          animation: arrowLight 2.5s infinite;
+  -webkit-animation: arrowLight 2s infinite;
+          animation: arrowLight 2s infinite;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
