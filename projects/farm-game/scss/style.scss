@@ -1,0 +1,242 @@
+/* ------------------------------- General ------------------------------- */
+$screen-lg: 1250px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 480px;
+$screen-xxs: 380px;
+
+$color-primary: #FF6861;
+$color-secondary: #FDFCEF;
+$black: #000;
+$white: #fff;
+
+$font-primary: 'Montserrat', sans-serif;
+
+@mixin smoothAnimation($speed) {
+  transition: all $speed ease;
+}
+
+@keyframes ladyBugAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+h1, h2, h3, p {
+  color: $black;
+  margin: 0;
+}
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 140%;
+}
+h1 {
+  font-size: 50px;
+  @media screen and (max-width: ($screen-xs - 1px)) {
+    font-size: 34px;
+  }
+}
+h2 {
+  font-size: 40px;
+  @media screen and (max-width: ($screen-xs - 1px)) {
+    font-size: 32px;
+  }
+}
+h3 {
+  font-size: 30px;
+  @media screen and (max-width: ($screen-xs - 1px)) {
+    font-size: 25px;
+  }
+}
+p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 136.7%;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  background: $color-secondary;
+  font-family: $font-primary;
+  * {
+    box-sizing: border-box;
+  }
+}
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header, section, footer {
+  padding: 60px 0;
+}
+
+.logo {
+  @include smoothAnimation(.2s);
+  @media screen and (max-width: ($screen-sm - 1px)) {
+    display: block;
+    margin: 0 auto;
+  }
+  &:hover {
+    filter: drop-shadow(5px 5px 3px rgba($black, .3));
+  }
+}
+
+/* ------------------------------ Buttons ------------------------------ */
+.btn {
+  display: inline-block;
+  padding: 22px 70px;
+  border-radius: 100px;
+  background: $color-primary;
+  font-size: 18px;
+  color: $white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s ease;
+  width: fit-content;
+  border: 1px solid $color-primary;
+  @include smoothAnimation(.2s);
+  @media screen and (max-width: ($screen-xs - 1px)) {
+    width: 100%;
+  }
+  &:hover {
+    background: $white;
+    color: $color-primary;
+  }
+}
+
+/* ------------------------ Fifty-Fifty Sections ------------------------ */
+.ff-section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  align-items: center;
+  @media screen and (max-width: ($screen-sm - 1px)) {
+    flex-direction: column;
+    row-gap: 60px;
+  }
+  & > div {
+    width: 50%;
+    @media screen and (max-width: ($screen-sm - 1px)) {
+      width: 100%;
+    }
+  }
+  .text-side {
+    max-width: 450px;
+    @media screen and (max-width: ($screen-sm - 1px)) {
+      text-align: center;
+    }
+    @media screen and (max-width: ($screen-xs - 1px)) {
+      
+    }
+    p {
+      margin-top: 30px;
+    }
+    .btn {
+      margin-top: 30px;
+    }
+  }
+  .media-side {
+    max-width: 465px;
+    text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 255px;
+      object-fit: contain;
+      @include smoothAnimation(.2s);
+    }
+    &:hover img {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
+    }
+  }
+  &.hero-section {
+    margin-top: 80px;
+    @media screen and (max-width: ($screen-xs - 1px)) {
+      margin-top: 40px;
+    }
+    .media-side {
+      padding: 105px 50px;
+      border-radius: 70px;
+      background: linear-gradient(180deg, #FFE195 0%, #FF5B5B 100%);
+      @media screen and (max-width: ($screen-xs - 1px)) {
+        padding: 70px 50px;
+      }
+    }
+  }
+  &.goal-section {
+    background: linear-gradient(102deg, #FFF6DF 17.38%, #FFDFDE 81.25%);
+    border-radius: 60px;
+    padding: 75px 125px;
+    @media screen and (max-width: ($screen-md - 1px)) {
+      padding: 75px 85px;
+    }
+    @media screen and (max-width: ($screen-sm - 1px)) {
+      padding: 75px 15px;
+    }
+    .media-side:hover img {
+      animation: ladyBugAnimation 0.1s 3;
+    }
+  }
+}
+
+/* -------------------------- Features Section -------------------------- */
+.features {
+  text-align: center;
+  .feature-items-wrapper {
+    max-width: fit-content;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    @media screen and (max-width: ($screen-xs - 1px)) {
+      margin: 55px auto 0;
+      row-gap: 50px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      column-gap: 35px;
+      @media screen and (max-width: ($screen-sm - 1px)) {
+        flex-direction: column;
+        row-gap: 25px;
+      }
+      .feature-icon {
+        @include smoothAnimation(.2s);
+      }
+      .feature-description {
+        text-align: left;
+        @media screen and (max-width: ($screen-sm - 1px)) {
+          text-align: center;
+        }
+        p {
+          margin-top: 11px;
+        }
+      }
+      &:hover .feature-icon {
+        filter: drop-shadow(5px 5px 3px rgba($black, .3));
+      }
+    }
+  }
+}
+
+/* ------------------------------- Footer ------------------------------- */
+.footer {
+  padding-bottom: 120px;
+  text-align: center;
+  @media screen and (max-width: ($screen-xs - 1px)) {
+    padding-bottom: 60px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
