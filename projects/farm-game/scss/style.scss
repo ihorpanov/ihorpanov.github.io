@@ -1,0 +1,99 @@
+/* ------------------------------- General ------------------------------- */
+$screen-lg: 1250px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 480px;
+$screen-xxs: 380px;
+
+$color-primary: #FF6861;
+$color-secondary: #FDFCEF;
+$black: #000;
+$white: #fff;
+
+$font-primary: 'Montserrat', sans-serif;
+
+@mixin smoothAnimation($speed) {
+  transition: all $speed ease;
+}
+h1, h2, h3, p {
+  color: $black;
+  margin: 0;
+}
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 140%;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 136.7%;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  background: $color-secondary;
+  font-family: $font-primary;
+  * {
+    box-sizing: border-box;
+  }
+}
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 22px 70px;
+  border-radius: 100px;
+  background: $color-primary;
+  font-size: 18px;
+  color: $white;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s ease;
+  width: fit-content;
+}
+
+/* ------------------------ Fifty-Fifty Sections ------------------------ */
+.ff-section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  align-items: center;
+  & > div {
+    width: 50%;
+  }
+  .text-side {
+    max-width: 450px;
+  }
+  .media-side {
+    padding: 105px 50px;
+    background: linear-gradient(180deg, #FFE195 0%, #FF5B5B 100%);
+    border-radius: 70px;
+    max-width: 465px;
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: 255px;
+      object-fit: contain;
+      @include smoothAnimation(.2s);
+    }
+    &:hover img {
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
+    }
+  }
+}
