@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript | Tabs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <ul class="navigation">
+        <li><a href="index.html">Tabs</a></li>
+        <li><a href="slider.html">Slider</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="tabs-wrapper">
+    <div class="container">
+      <div class="tabs">
+        <button class="tab-btn active" data-btn="1">1</button>
+        <button class="tab-btn" data-btn="2">2</button>
+        <button class="tab-btn" data-btn="3">3</button>
+      </div>
+      <div class="tabs-content">
+        <div class="content active" data-content="1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iure veniam molestias. Officia, reprehenderit officiis! Doloribus totam sequi, in sint tempore earum repudiandae expedita cupiditate!</p>
+        </div>
+        <div class="content" data-content="2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iure veniam molestias. Officia, reprehenderit officiis! Doloribus totam sequi, in sint tempore earum repudiandae expedita cupiditate!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iure veniam molestias. Officia, reprehenderit officiis! Doloribus totam sequi, in sint tempore earum repudiandae expedita cupiditate!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iure veniam molestias. Officia, reprehenderit officiis! Doloribus totam sequi, in sint tempore earum repudiandae expedita cupiditate!</p>
+        </div>
+        <div class="content subtabs-wrapper" data-content="3">
+          <div class="subtabs">
+            <button class="subtab-btn active" data-btn="1">1</button>
+            <button class="subtab-btn" data-btn="2">2</button>
+          </div>
+          <div class="subtab-content active" data-content="1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur animi quaerat explicabo reiciendis voluptatem iure.</p>
+          </div>
+          <div class="subtab-content" data-content="2">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/tabs.js"></script>
+</body>
+</html>
