@@ -167,6 +167,37 @@ table {
     left: 100%;
   }
 }
+/* ------------------- Error Message ------------------- */
+h1 {
+  display: none;
+  font-size: 2.5rem;
+  padding: 10% 4%;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 599px) {
+  body {
+    background: rgb(34, 34, 34);
+  }
+  h1 {
+    display: block;
+  }
+  .environment {
+    display: none;
+  }
+}
+@media screen and (max-height: 850px) {
+  body {
+    background: rgb(34, 34, 34);
+  }
+  h1 {
+    display: block;
+  }
+  .environment {
+    display: none;
+  }
+}
 /* ------------------- Background ------------------- */
 .environment {
   position: relative;
@@ -188,7 +219,9 @@ table {
   border-right: 17vw solid transparent;
   left: 50%;
   top: 30%;
-  margin-left: -450px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -227,6 +260,11 @@ table {
   /* Police Lights */
   /* State Number */
 }
+@media screen and (max-width: 1100px) {
+  .car {
+    width: 170px;
+  }
+}
 .car:before {
   content: "";
   width: 70%;
@@ -239,6 +277,12 @@ table {
   -webkit-transform: translate(-50%, calc(-100% - 1px));
       -ms-transform: translate(-50%, calc(-100% - 1px));
           transform: translate(-50%, calc(-100% - 1px));
+}
+@media screen and (max-width: 1100px) {
+  .car:before {
+    border-bottom: 55px solid white;
+    width: 60%;
+  }
 }
 .car:after {
   content: "";
@@ -253,6 +297,13 @@ table {
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
+}
+@media screen and (max-width: 1100px) {
+  .car:after {
+    width: 99px;
+    top: -72px;
+    height: 15px;
+  }
 }
 .car .state-number {
   font-size: 12px;

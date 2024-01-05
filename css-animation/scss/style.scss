@@ -106,6 +106,39 @@ table {
   }
 }
 
+/* ------------------- Error Message ------------------- */
+h1 {
+  display: none;
+  font-size: 2.5rem;
+  padding: 10% 4%;
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 599px) {
+  body {
+    background: rgb(34, 34, 34);
+  }
+  h1 {
+    display: block;
+  }
+  .environment {
+    display: none;
+  }
+}
+@media screen and (max-height: 850px) {
+  body {
+    background: rgb(34, 34, 34);
+  }
+  h1 {
+    display: block;
+  }
+  .environment {
+    display: none;
+  }
+}
+
+
+
 /* ------------------- Background ------------------- */
 .environment {
   position: relative;
@@ -124,7 +157,7 @@ table {
     border-right: 17vw solid transparent;
     left: 50%;
     top: 30%;
-    margin-left: -450px;
+    transform: translateX(-50%);
     box-sizing: border-box;
   }
   /*------------ Sun------------ */
@@ -155,6 +188,9 @@ table {
   position: relative;
   border-top: 2px solid black;
 	animation: 5s linear car infinite;
+  @media screen and (max-width: 1100px) {
+    width: 170px;
+  }
   /* Roof */
   &:before {
     content: '';
@@ -166,6 +202,10 @@ table {
     top: 0;
     left: 50%;
     transform: translate(-50%, calc(-100% - 1px));
+    @media screen and (max-width: 1100px) {
+      border-bottom: 55px solid white;
+      width: 60%;
+    }
   }
   /* Police Lights */
   &:after {
@@ -178,6 +218,11 @@ table {
     top: -91px;
     left: 50%;
     transform: translate(-50%);
+    @media screen and (max-width: 1100px) {
+      width: 99px;
+      top: -72px;
+      height: 15px;
+    }
   }
   /* State Number */
   .state-number {
