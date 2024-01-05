@@ -75,7 +75,7 @@ table {
     opacity: 1;
   }
   100% {
-    left: 20%;
+    left: 10%;
     top: 100%;
     transform: scale(5);
     opacity: 1;
@@ -87,7 +87,7 @@ table {
     opacity: 1;
   }
 	100% {
-    right: 20%;
+    right: 10%;
     top: 100%;
     transform: scale(5);
     opacity: 1;
@@ -178,7 +178,6 @@ table {
     top: -91px;
     left: 50%;
     transform: translate(-50%);
-    animation: 0.3s linear policeLights infinite;
   }
   /* State Number */
   .state-number {
@@ -206,6 +205,9 @@ table {
       right: 10px;
     }
   }
+  &:hover:after {
+    animation: 0.3s linear policeLights infinite;
+  }
 }
 
 /* ---------------------- Trees ---------------------- */
@@ -214,7 +216,7 @@ table {
 	width: 5px;
 	height: 30px;
 	background: #341e18;
-	left: 40%;
+	left: 35%;
 	top: 30%;
   transform: translateY(-100%);
   opacity: 0;
@@ -234,7 +236,7 @@ table {
   }
   &.tree2 {
     left: auto;
-    right: 40%;
+    right: 35%;
     animation: 1.5s linear tree2Scale infinite 1s;
   }
 }
