@@ -1,0 +1,375 @@
+/* ---------------- CSS Reset START ---------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ------------------- Keyframes ------------------- */
+@-webkit-keyframes sunShine {
+  50% {
+    -webkit-box-shadow: 0 0 35px 55px yellow;
+            box-shadow: 0 0 35px 55px yellow;
+  }
+}
+@keyframes sunShine {
+  50% {
+    -webkit-box-shadow: 0 0 35px 55px yellow;
+            box-shadow: 0 0 35px 55px yellow;
+  }
+}
+@-webkit-keyframes car {
+  30% {
+    left: 45%;
+    top: 60%;
+  }
+  70% {
+    left: 47%;
+    top: 80%;
+  }
+}
+@keyframes car {
+  30% {
+    left: 45%;
+    top: 60%;
+  }
+  70% {
+    left: 47%;
+    top: 80%;
+  }
+}
+@-webkit-keyframes policeLights {
+  50% {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #000127), color-stop(50%, #ff0000));
+    background: linear-gradient(to right, #000127 50%, #ff0000 50%);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0c00ff), color-stop(50%, #360000));
+    background: linear-gradient(to right, #0c00ff 50%, #360000 50%);
+  }
+}
+@keyframes policeLights {
+  50% {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #000127), color-stop(50%, #ff0000));
+    background: linear-gradient(to right, #000127 50%, #ff0000 50%);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0c00ff), color-stop(50%, #360000));
+    background: linear-gradient(to right, #0c00ff 50%, #360000 50%);
+  }
+}
+@-webkit-keyframes tree1Scale {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: 20%;
+    top: 100%;
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 1;
+  }
+}
+@keyframes tree1Scale {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: 20%;
+    top: 100%;
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes tree2Scale {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    right: 20%;
+    top: 100%;
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 1;
+  }
+}
+@keyframes tree2Scale {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    right: 20%;
+    top: 100%;
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cloud1Motion {
+  100% {
+    left: 100%;
+  }
+}
+@keyframes cloud1Motion {
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes cloud2Motion {
+  100% {
+    left: 100%;
+  }
+}
+@keyframes cloud2Motion {
+  100% {
+    left: 100%;
+  }
+}
+/* ------------------- Background ------------------- */
+.environment {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #93fffe), color-stop(30%, #71c71d));
+  background: linear-gradient(#93fffe 30%, #71c71d 30%);
+  position: relative;
+  overflow: hidden;
+  /* ---------- Road ---------- */
+  /*------------ Sun------------ */
+}
+.environment:before {
+  content: "";
+  width: 45%;
+  position: absolute;
+  border-bottom: 70vh solid #6a6a6a;
+  border-left: 17vw solid transparent;
+  border-right: 17vw solid transparent;
+  left: 50%;
+  top: 30%;
+  margin-left: -450px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.environment:after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  display: block;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 35px 10px yellow;
+          box-shadow: 0 0 35px 10px yellow;
+  -webkit-animation: 2s linear sunShine infinite alternate;
+          animation: 2s linear sunShine infinite alternate;
+}
+
+/* ---------------------- Car ---------------------- */
+.car {
+  position: absolute;
+  width: 250px;
+  background: white;
+  border-radius: 10px;
+  top: 75%;
+  left: 55%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 15px;
+  z-index: 12;
+  position: relative;
+  border-top: 2px solid black;
+  -webkit-animation: 5s linear car infinite;
+          animation: 5s linear car infinite;
+  /* Roof */
+  /* Police Lights */
+  /* State Number */
+}
+.car:before {
+  content: "";
+  width: 70%;
+  position: absolute;
+  border-bottom: 70px solid white;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-100% - 1px));
+      -ms-transform: translate(-50%, calc(-100% - 1px));
+          transform: translate(-50%, calc(-100% - 1px));
+}
+.car:after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #000127), color-stop(50%, #360000));
+  background: linear-gradient(to right, #000127 50%, #360000 50%);
+  border-radius: 10px;
+  top: -91px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-animation: 0.3s linear policeLights infinite;
+          animation: 0.3s linear policeLights infinite;
+}
+.car .state-number {
+  font-size: 12px;
+  margin: auto;
+  padding: 3px;
+  text-align: center;
+  background: rgb(228, 228, 228);
+  border-radius: 5px;
+  max-width: 60px;
+  /* Wheels */
+}
+.car .state-number:before, .car .state-number:after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 30px;
+  background: black;
+  border-radius: 0 0 10px 10px;
+  left: 10px;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.car .state-number:after {
+  left: auto;
+  right: 10px;
+}
+
+/* ---------------------- Trees ---------------------- */
+.tree {
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  background: #341e18;
+  left: 40%;
+  top: 30%;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+.tree:before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 30px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(97%, green), color-stop(97%, transparent));
+  background: linear-gradient(to bottom, green 97%, transparent 97%);
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, -70%);
+      -ms-transform: translate(-50%, -70%);
+          transform: translate(-50%, -70%);
+}
+.tree.tree1 {
+  -webkit-animation: 1.5s linear tree1Scale infinite;
+          animation: 1.5s linear tree1Scale infinite;
+}
+.tree.tree2 {
+  left: auto;
+  right: 40%;
+  -webkit-animation: 1.5s linear tree2Scale infinite 1s;
+          animation: 1.5s linear tree2Scale infinite 1s;
+}
+
+/*----------------------- Clouds----------------------- */
+.cloud {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background: white;
+  top: 10%;
+  left: 0%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px 20px white;
+          box-shadow: 0 0 10px 20px white;
+  z-index: 1;
+}
+.cloud:before, .cloud:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: inherit;
+  top: 30%;
+  left: 0%;
+  -webkit-transform: translateX(-80%);
+      -ms-transform: translateX(-80%);
+          transform: translateX(-80%);
+  border-radius: 50%;
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+}
+.cloud:after {
+  height: 40px;
+  width: 40px;
+  top: 40%;
+  left: auto;
+  right: 0;
+  -webkit-transform: translateX(80%);
+      -ms-transform: translateX(80%);
+          transform: translateX(80%);
+}
+.cloud.cloud1 {
+  -webkit-animation: 6s linear cloud1Motion infinite;
+          animation: 6s linear cloud1Motion infinite;
+}
+.cloud.cloud2 {
+  top: 5%;
+  z-index: 0;
+  background-color: rgb(185, 185, 185);
+  -webkit-box-shadow: 0 0 10px 20px rgb(185, 185, 185);
+          box-shadow: 0 0 10px 20px rgb(185, 185, 185);
+  -webkit-animation: 15s linear cloud2Motion infinite;
+          animation: 15s linear cloud2Motion infinite;
+}
